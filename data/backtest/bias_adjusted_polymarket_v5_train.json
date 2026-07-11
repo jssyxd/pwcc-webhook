@@ -1,0 +1,143 @@
+{
+  "_lineage": {
+    "generated_at_utc": "2026-05-21T18:57:42.234396+00:00",
+    "script_sha256": "c782f827f33dc499f43f99c2942d69a36f8e09dd604fa566e537a6a8129c6fab",
+    "variant_name": "bias_adjusted_v5_polymarket_truth_rolling30d",
+    "variant_hash": "656a601bfb6ccd196e98db50f8cc01e6320132aadede47792255d82cc1ff92a6",
+    "split_version": "v3.0",
+    "split_window_name": "train",
+    "split_window_start": "2024-04-07",
+    "split_window_end": "2025-08-19",
+    "truth_source": "polymarket_parsed_markets_v3 yes_won (via polymarket_resolution_sources_v1.json)",
+    "bias_estimator_support": "Iowa State Mesonet ASOS daily peak \u2014 used to compute the rolling residual that we SUBTRACT. ASOS-as-truth (\u03ba=0.68) is NOT used in headline scoring.",
+    "metric": "bucket_hit = (predicted_integer falls in winner_bucket)",
+    "consensus_attack_addressed": "Kimi #3 / GPT #1 / Gemini #4 \u2014 ASOS != Polymarket settlement source. Headline now scored against Polymarket-direct truth.",
+    "aggregate_summary": {
+      "n_market_cells": 2334,
+      "baseline_bucket_hit_rate": 0.12253641816623821,
+      "variant_bucket_hit_rate": 0.16409597257926306,
+      "lift_pp": 4.155955441302485,
+      "by_unit": {
+        "F_cities": {
+          "n": 2334,
+          "baseline_rate": 0.12253641816623821,
+          "variant_rate": 0.16409597257926306,
+          "lift_pp": 4.155955441302485
+        },
+        "C_cities": {
+          "n": 0,
+          "baseline_rate": NaN,
+          "variant_rate": NaN,
+          "lift_pp": NaN
+        }
+      }
+    }
+  },
+  "per_city_summary": {
+    "nyc": {
+      "unit": "F",
+      "n_market_cells": 2334,
+      "baseline_bucket_hit_rate": 0.12253641816623821,
+      "variant_bucket_hit_rate": 0.16409597257926306,
+      "lift_pp": 4.155955441302485,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.16666666666666666,
+          "lift_pp": 4.411764705882353,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8088235294117647
+        },
+        "gfs_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.15196078431372548,
+          "lift_pp": 2.9411764705882355,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.803921568627451
+        },
+        "icon_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.1715686274509804,
+          "lift_pp": 4.901960784313726,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7352941176470589
+        },
+        "ukmo_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.1715686274509804,
+          "lift_pp": 4.901960784313726,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7794117647058824
+        },
+        "knmi_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.15196078431372548,
+          "lift_pp": 2.9411764705882355,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7401960784313726
+        },
+        "gem_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.1715686274509804,
+          "lift_pp": 4.901960784313726,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7549019607843137
+        },
+        "meteofrance_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.16666666666666666,
+          "lift_pp": 4.411764705882353,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7647058823529411
+        },
+        "jma_seamless": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.13725490196078433,
+          "lift_pp": 1.4705882352941178,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7598039215686274
+        },
+        "cma_grapes_global": {
+          "n": 199,
+          "baseline_bucket_hit_rate": 0.12562814070351758,
+          "variant_bucket_hit_rate": 0.1708542713567839,
+          "lift_pp": 4.522613065326633,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7688442211055276
+        },
+        "bom_access_global": {
+          "n": 158,
+          "baseline_bucket_hit_rate": 0.12025316455696203,
+          "variant_bucket_hit_rate": 0.15822784810126583,
+          "lift_pp": 3.7974683544303796,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7784810126582279
+        },
+        "gfs_graphcast025": {
+          "n": 204,
+          "baseline_bucket_hit_rate": 0.12254901960784313,
+          "variant_bucket_hit_rate": 0.16666666666666666,
+          "lift_pp": 4.411764705882353,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7647058823529411
+        },
+        "kma_seamless": {
+          "n": 141,
+          "baseline_bucket_hit_rate": 0.12056737588652482,
+          "variant_bucket_hit_rate": 0.19148936170212766,
+          "lift_pp": 7.092198581560283,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8439716312056738
+        }
+      }
+    }
+  }
+}

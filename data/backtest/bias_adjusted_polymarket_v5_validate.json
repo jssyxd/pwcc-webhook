@@ -1,0 +1,717 @@
+{
+  "_lineage": {
+    "generated_at_utc": "2026-05-21T18:59:52.001879+00:00",
+    "script_sha256": "c782f827f33dc499f43f99c2942d69a36f8e09dd604fa566e537a6a8129c6fab",
+    "variant_name": "bias_adjusted_v5_polymarket_truth_rolling30d",
+    "variant_hash": "656a601bfb6ccd196e98db50f8cc01e6320132aadede47792255d82cc1ff92a6",
+    "split_version": "v3.0",
+    "split_window_name": "validate",
+    "split_window_start": "2025-08-20",
+    "split_window_end": "2026-01-06",
+    "truth_source": "polymarket_parsed_markets_v3 yes_won (via polymarket_resolution_sources_v1.json)",
+    "bias_estimator_support": "Iowa State Mesonet ASOS daily peak \u2014 used to compute the rolling residual that we SUBTRACT. ASOS-as-truth (\u03ba=0.68) is NOT used in headline scoring.",
+    "metric": "bucket_hit = (predicted_integer falls in winner_bucket)",
+    "consensus_attack_addressed": "Kimi #3 / GPT #1 / Gemini #4 \u2014 ASOS != Polymarket settlement source. Headline now scored against Polymarket-direct truth.",
+    "aggregate_summary": {
+      "n_market_cells": 3579,
+      "baseline_bucket_hit_rate": 0.17071807767532832,
+      "variant_bucket_hit_rate": 0.18692372170997484,
+      "lift_pp": 1.620564403464655,
+      "by_unit": {
+        "F_cities": {
+          "n": 2523,
+          "baseline_rate": 0.17677368212445502,
+          "variant_rate": 0.2049147839873167,
+          "lift_pp": 2.8141101862861673
+        },
+        "C_cities": {
+          "n": 1056,
+          "baseline_rate": 0.15625,
+          "variant_rate": 0.14393939393939395,
+          "lift_pp": -1.231060606060606
+        }
+      }
+    }
+  },
+  "per_city_summary": {
+    "atlanta": {
+      "unit": "F",
+      "n_market_cells": 352,
+      "baseline_bucket_hit_rate": 0.46875,
+      "variant_bucket_hit_rate": 0.5028409090909091,
+      "lift_pp": 3.409090909090909,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        },
+        "gfs_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        },
+        "icon_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.9375
+        },
+        "ukmo_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.5,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        },
+        "knmi_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        },
+        "gem_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.5,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        },
+        "meteofrance_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.875
+        },
+        "jma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.4375,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.84375
+        },
+        "cma_grapes_global": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.40625,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.75
+        },
+        "gfs_graphcast025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.5,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.84375
+        },
+        "kma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.46875,
+          "variant_bucket_hit_rate": 0.53125,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.90625
+        }
+      }
+    },
+    "buenos-aires": {
+      "unit": "C",
+      "n_market_cells": 352,
+      "baseline_bucket_hit_rate": 0.15625,
+      "variant_bucket_hit_rate": 0.19886363636363635,
+      "lift_pp": 4.261363636363637,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.40625
+        },
+        "gfs_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "icon_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.59375
+        },
+        "ukmo_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.5625
+        },
+        "knmi_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.46875
+        },
+        "gem_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.46875
+        },
+        "meteofrance_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.5
+        },
+        "jma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.5
+        },
+        "cma_grapes_global": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.53125
+        },
+        "gfs_graphcast025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.625
+        },
+        "kma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.15625,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6875
+        }
+      }
+    },
+    "dallas": {
+      "unit": "F",
+      "n_market_cells": 374,
+      "baseline_bucket_hit_rate": 0.2647058823529412,
+      "variant_bucket_hit_rate": 0.42780748663101603,
+      "lift_pp": 16.310160427807485,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.47058823529411764,
+          "lift_pp": 20.58823529411765,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8235294117647058
+        },
+        "gfs_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4411764705882353,
+          "lift_pp": 17.647058823529413,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.9117647058823529
+        },
+        "icon_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4117647058823529,
+          "lift_pp": 14.705882352941176,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.9117647058823529
+        },
+        "ukmo_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4117647058823529,
+          "lift_pp": 14.705882352941176,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8529411764705882
+        },
+        "knmi_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4411764705882353,
+          "lift_pp": 17.647058823529413,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8823529411764706
+        },
+        "gem_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4411764705882353,
+          "lift_pp": 17.647058823529413,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.9411764705882353
+        },
+        "meteofrance_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4117647058823529,
+          "lift_pp": 14.705882352941176,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.9117647058823529
+        },
+        "jma_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4411764705882353,
+          "lift_pp": 17.647058823529413,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7647058823529411
+        },
+        "cma_grapes_global": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4411764705882353,
+          "lift_pp": 17.647058823529413,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7941176470588235
+        },
+        "gfs_graphcast025": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.38235294117647056,
+          "lift_pp": 11.764705882352942,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8529411764705882
+        },
+        "kma_seamless": {
+          "n": 34,
+          "baseline_bucket_hit_rate": 0.2647058823529412,
+          "variant_bucket_hit_rate": 0.4117647058823529,
+          "lift_pp": 14.705882352941176,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.8823529411764706
+        }
+      }
+    },
+    "nyc": {
+      "unit": "F",
+      "n_market_cells": 1445,
+      "baseline_bucket_hit_rate": 0.09550173010380623,
+      "variant_bucket_hit_rate": 0.09134948096885813,
+      "lift_pp": -0.41522491349480967,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.07857142857142857,
+          "lift_pp": -1.4285714285714286,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6928571428571428
+        },
+        "gfs_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.1,
+          "lift_pp": 0.7142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6928571428571428
+        },
+        "icon_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.10714285714285714,
+          "lift_pp": 1.4285714285714286,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7571428571428571
+        },
+        "ukmo_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.07142857142857142,
+          "lift_pp": -2.142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7214285714285714
+        },
+        "knmi_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.07142857142857142,
+          "lift_pp": -2.142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7357142857142858
+        },
+        "gem_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.08571428571428572,
+          "lift_pp": -0.7142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6857142857142857
+        },
+        "meteofrance_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.07142857142857142,
+          "lift_pp": -2.142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6642857142857143
+        },
+        "jma_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.12142857142857143,
+          "lift_pp": 2.857142857142857,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7214285714285714
+        },
+        "cma_grapes_global": {
+          "n": 45,
+          "baseline_bucket_hit_rate": 0.17777777777777778,
+          "variant_bucket_hit_rate": 0.08888888888888889,
+          "lift_pp": -8.88888888888889,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6
+        },
+        "gfs_graphcast025": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.11428571428571428,
+          "lift_pp": 2.142857142857143,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7428571428571429
+        },
+        "kma_seamless": {
+          "n": 140,
+          "baseline_bucket_hit_rate": 0.09285714285714286,
+          "variant_bucket_hit_rate": 0.09285714285714286,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.7214285714285714
+        }
+      }
+    },
+    "seattle": {
+      "unit": "F",
+      "n_market_cells": 352,
+      "baseline_bucket_hit_rate": 0.125,
+      "variant_bucket_hit_rate": 0.13636363636363635,
+      "lift_pp": 1.1363636363636365,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.125,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.71875
+        },
+        "gfs_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.125,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.625
+        },
+        "icon_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.09375,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.78125
+        },
+        "ukmo_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": 6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "knmi_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.25,
+          "lift_pp": 12.5,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.75
+        },
+        "gem_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.09375,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.625
+        },
+        "meteofrance_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.09375,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "jma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.15625,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "cma_grapes_global": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.09375,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.53125
+        },
+        "gfs_graphcast025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.125,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "kma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.125,
+          "variant_bucket_hit_rate": 0.15625,
+          "lift_pp": 3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.75
+        }
+      }
+    },
+    "seoul": {
+      "unit": "C",
+      "n_market_cells": 352,
+      "baseline_bucket_hit_rate": 0.09375,
+      "variant_bucket_hit_rate": 0.02556818181818182,
+      "lift_pp": -6.818181818181818,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.0,
+          "lift_pp": -9.375,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.375
+        },
+        "gfs_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.34375
+        },
+        "icon_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.375
+        },
+        "ukmo_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.25
+        },
+        "knmi_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.0,
+          "lift_pp": -9.375,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.4375
+        },
+        "gem_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.0625,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.53125
+        },
+        "meteofrance_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.0,
+          "lift_pp": -9.375,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.28125
+        },
+        "jma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.46875
+        },
+        "cma_grapes_global": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.375
+        },
+        "gfs_graphcast025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.28125
+        },
+        "kma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.09375,
+          "variant_bucket_hit_rate": 0.03125,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.46875
+        }
+      }
+    },
+    "toronto": {
+      "unit": "C",
+      "n_market_cells": 352,
+      "baseline_bucket_hit_rate": 0.21875,
+      "variant_bucket_hit_rate": 0.20738636363636365,
+      "lift_pp": -1.1363636363636365,
+      "per_model": {
+        "ecmwf_ifs025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6875
+        },
+        "gfs_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.625
+        },
+        "icon_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.71875
+        },
+        "ukmo_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6875
+        },
+        "knmi_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.71875
+        },
+        "gem_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "meteofrance_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.6875
+        },
+        "jma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.625
+        },
+        "cma_grapes_global": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.15625,
+          "lift_pp": -6.25,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.59375
+        },
+        "gfs_graphcast025": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.21875,
+          "lift_pp": 0.0,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.65625
+        },
+        "kma_seamless": {
+          "n": 32,
+          "baseline_bucket_hit_rate": 0.21875,
+          "variant_bucket_hit_rate": 0.1875,
+          "lift_pp": -3.125,
+          "baseline_in_range_rate": 1.0,
+          "variant_in_range_rate": 0.59375
+        }
+      }
+    }
+  }
+}

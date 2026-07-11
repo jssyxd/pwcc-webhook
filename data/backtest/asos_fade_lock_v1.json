@@ -1,0 +1,1265 @@
+{
+  "_lineage": {
+    "afternoon_from_hour": 11,
+    "cities": [
+      "amsterdam",
+      "ankara",
+      "atlanta",
+      "austin",
+      "beijing",
+      "buenos-aires",
+      "busan",
+      "chengdu",
+      "chicago",
+      "chongqing",
+      "dallas",
+      "denver",
+      "helsinki",
+      "hong-kong",
+      "houston",
+      "jakarta",
+      "kuala-lumpur",
+      "london",
+      "los-angeles",
+      "lucknow",
+      "madrid",
+      "mexico-city",
+      "miami",
+      "milan",
+      "munich",
+      "nyc",
+      "panama-city",
+      "paris",
+      "san-francisco",
+      "sao-paulo",
+      "seattle",
+      "seoul",
+      "shanghai",
+      "shenzhen",
+      "singapore",
+      "taipei",
+      "tokyo",
+      "toronto",
+      "warsaw",
+      "wellington",
+      "wuhan"
+    ],
+    "generated_at": "2026-04-08T05:30:45.462316-04:00",
+    "input_dir": "data/api-results/mesonet-hourly-asos",
+    "input_manifest_sha256": "e3256ba6df32df96a2a1e91cd89d81f4c237506c7a629b30b0f48f0e1ff80623",
+    "phase_02_16": {
+      "forecast_source": "Iowa State Mesonet asos.py hourly tmpf (KDEN, KIAH, 2024-04-07 to 2026-04-07)",
+      "recomputed_at": "2026-04-10T03:09:53.336889+00:00",
+      "recomputed_cities": ["denver", "houston"],
+      "station_corrections": {
+        "denver": "BKF\u2192DEN",
+        "houston": "HOU\u2192IAH"
+      }
+    },
+    "round_pct_digits": 2,
+    "script_sha256": "acc31bdcf4eaec5e947d911e890dc46bda262141c0c9a67688e975f3d9a80f3d",
+    "shape_proxy_cities": {
+      "hong-kong": {
+        "actual_resolution_source": "HKO Observatory (daily peak)",
+        "hourly_proxy_station": "VHHH",
+        "offset_note": "VHHH typically 0.7-1.2\u00b0C warmer than HKO; offset is ~constant across the day so the peak-hour distribution shape is preserved"
+      }
+    },
+    "skipped_cities": [],
+    "source": "Iowa State Mesonet asos.py \u2014 hourly tmpf, 2024-04-07 to 2026-04-07",
+    "station_count": 41,
+    "tz_method": "zoneinfo (IANA)",
+    "window_12_to_5_inclusive_hours": [12, 16]
+  },
+  "per_city": {
+    "amsterdam": {
+      "fade1h": {
+        "events": 730,
+        "held": 311,
+        "rate": 42.6
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 507,
+        "rate": 69.45
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 579,
+        "rate": 79.32
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "12:06",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 134,
+        "rate": 18.33
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 494,
+        "rate": 67.58
+      }
+    },
+    "ankara": {
+      "fade1h": {
+        "events": 730,
+        "held": 323,
+        "rate": 44.25
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 608,
+        "rate": 83.29
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 667,
+        "rate": 91.37
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:56",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 231,
+        "rate": 31.6
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 669,
+        "rate": 91.52
+      }
+    },
+    "atlanta": {
+      "fade1h": {
+        "events": 731,
+        "held": 391,
+        "rate": 53.49
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 613,
+        "rate": 83.86
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 656,
+        "rate": 89.86
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:58",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 211,
+        "rate": 28.86
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 630,
+        "rate": 86.18
+      }
+    },
+    "austin": {
+      "fade1h": {
+        "events": 731,
+        "held": 458,
+        "rate": 62.65
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 651,
+        "rate": 89.06
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 685,
+        "rate": 93.84
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "14:20",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 252,
+        "rate": 34.47
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 661,
+        "rate": 90.42
+      }
+    },
+    "beijing": {
+      "fade1h": {
+        "events": 730,
+        "held": 333,
+        "rate": 45.62
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 608,
+        "rate": 83.29
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 678,
+        "rate": 92.88
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:04",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 221,
+        "rate": 30.23
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 648,
+        "rate": 88.65
+      }
+    },
+    "buenos-aires": {
+      "fade1h": {
+        "events": 731,
+        "held": 319,
+        "rate": 43.64
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 553,
+        "rate": 75.65
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 624,
+        "rate": 85.48
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:41",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 190,
+        "rate": 25.99
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 634,
+        "rate": 86.73
+      }
+    },
+    "busan": {
+      "fade1h": {
+        "events": 730,
+        "held": 412,
+        "rate": 56.44
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 586,
+        "rate": 80.27
+      },
+      "fade3h": {
+        "events": 729,
+        "held": 648,
+        "rate": 88.89
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:50",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 173,
+        "rate": 23.67
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 592,
+        "rate": 80.98
+      }
+    },
+    "chengdu": {
+      "fade1h": {
+        "events": 730,
+        "held": 261,
+        "rate": 35.75
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 507,
+        "rate": 69.45
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 582,
+        "rate": 79.73
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "12:54",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 181,
+        "rate": 24.76
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 558,
+        "rate": 76.33
+      }
+    },
+    "chicago": {
+      "fade1h": {
+        "events": 731,
+        "held": 419,
+        "rate": 57.32
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 592,
+        "rate": 80.98
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 640,
+        "rate": 87.55
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:29",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 164,
+        "rate": 22.44
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 529,
+        "rate": 72.37
+      }
+    },
+    "chongqing": {
+      "fade1h": {
+        "events": 730,
+        "held": 270,
+        "rate": 36.99
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 501,
+        "rate": 68.63
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 577,
+        "rate": 79.04
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "12:10",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 181,
+        "rate": 24.76
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 556,
+        "rate": 76.06
+      }
+    },
+    "dallas": {
+      "fade1h": {
+        "events": 731,
+        "held": 443,
+        "rate": 60.6
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 632,
+        "rate": 86.46
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 666,
+        "rate": 91.11
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:45",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 212,
+        "rate": 29.0
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 620,
+        "rate": 84.82
+      }
+    },
+    "denver": {
+      "fade1h": {
+        "events": 728,
+        "held": 476,
+        "rate": 65.38
+      },
+      "fade2h": {
+        "events": 727,
+        "held": 656,
+        "rate": 90.23
+      },
+      "fade3h": {
+        "events": 727,
+        "held": 693,
+        "rate": 95.32
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:57",
+      "peak_pct": {
+        "attempts": 728,
+        "hits": 170,
+        "rate": 23.35
+      },
+      "window_12_to_5_pct": {
+        "attempts": 728,
+        "hits": 609,
+        "rate": 83.65
+      }
+    },
+    "helsinki": {
+      "fade1h": {
+        "events": 730,
+        "held": 307,
+        "rate": 42.05
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 469,
+        "rate": 64.25
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 552,
+        "rate": 75.62
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "11:33",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 127,
+        "rate": 17.37
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 440,
+        "rate": 60.19
+      }
+    },
+    "hong-kong": {
+      "fade1h": {
+        "events": 730,
+        "held": 291,
+        "rate": 39.86
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 450,
+        "rate": 61.64
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 564,
+        "rate": 77.26
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "11:57",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 140,
+        "rate": 19.15
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 506,
+        "rate": 69.22
+      }
+    },
+    "houston": {
+      "fade1h": {
+        "events": 731,
+        "held": 399,
+        "rate": 54.58
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 607,
+        "rate": 83.04
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 657,
+        "rate": 89.88
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:18",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 184,
+        "rate": 25.17
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 622,
+        "rate": 85.09
+      }
+    },
+    "jakarta": {
+      "fade1h": {
+        "events": 729,
+        "held": 408,
+        "rate": 55.97
+      },
+      "fade2h": {
+        "events": 728,
+        "held": 606,
+        "rate": 83.24
+      },
+      "fade3h": {
+        "events": 728,
+        "held": 682,
+        "rate": 93.68
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "12:10",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 209,
+        "rate": 28.59
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 489,
+        "rate": 66.89
+      }
+    },
+    "kuala-lumpur": {
+      "fade1h": {
+        "events": 730,
+        "held": 330,
+        "rate": 45.21
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 585,
+        "rate": 80.14
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 657,
+        "rate": 90.0
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "13:09",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 214,
+        "rate": 29.27
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 661,
+        "rate": 90.42
+      }
+    },
+    "london": {
+      "fade1h": {
+        "events": 730,
+        "held": 320,
+        "rate": 43.84
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 504,
+        "rate": 69.04
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 583,
+        "rate": 79.86
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "12:20",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 150,
+        "rate": 20.52
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 514,
+        "rate": 70.31
+      }
+    },
+    "los-angeles": {
+      "fade1h": {
+        "events": 731,
+        "held": 517,
+        "rate": 70.73
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 638,
+        "rate": 87.28
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 697,
+        "rate": 95.35
+      },
+      "mode_peak_hour": 11,
+      "peak_hour_avg_str": "11:42",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 191,
+        "rate": 26.13
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 387,
+        "rate": 52.94
+      }
+    },
+    "lucknow": {
+      "fade1h": {
+        "events": 690,
+        "held": 332,
+        "rate": 48.12
+      },
+      "fade2h": {
+        "events": 680,
+        "held": 561,
+        "rate": 82.5
+      },
+      "fade3h": {
+        "events": 676,
+        "held": 621,
+        "rate": 91.86
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "13:12",
+      "peak_pct": {
+        "attempts": 713,
+        "hits": 210,
+        "rate": 29.45
+      },
+      "window_12_to_5_pct": {
+        "attempts": 713,
+        "hits": 633,
+        "rate": 88.78
+      }
+    },
+    "madrid": {
+      "fade1h": {
+        "events": 730,
+        "held": 234,
+        "rate": 32.05
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 438,
+        "rate": 60.0
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 491,
+        "rate": 67.26
+      },
+      "mode_peak_hour": 16,
+      "peak_hour_avg_str": "15:24",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 193,
+        "rate": 26.4
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 471,
+        "rate": 64.43
+      }
+    },
+    "mexico-city": {
+      "fade1h": {
+        "events": 731,
+        "held": 485,
+        "rate": 66.35
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 680,
+        "rate": 93.15
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 719,
+        "rate": 98.49
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:41",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 276,
+        "rate": 37.76
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 694,
+        "rate": 94.94
+      }
+    },
+    "miami": {
+      "fade1h": {
+        "events": 731,
+        "held": 424,
+        "rate": 58.0
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 596,
+        "rate": 81.53
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 682,
+        "rate": 93.3
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "12:20",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 177,
+        "rate": 24.21
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 528,
+        "rate": 72.23
+      }
+    },
+    "milan": {
+      "fade1h": {
+        "events": 730,
+        "held": 267,
+        "rate": 36.58
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 554,
+        "rate": 75.89
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 649,
+        "rate": 88.9
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:24",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 173,
+        "rate": 23.67
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 616,
+        "rate": 84.27
+      }
+    },
+    "munich": {
+      "fade1h": {
+        "events": 730,
+        "held": 287,
+        "rate": 39.32
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 542,
+        "rate": 74.25
+      },
+      "fade3h": {
+        "events": 729,
+        "held": 616,
+        "rate": 84.5
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "12:53",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 131,
+        "rate": 17.92
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 544,
+        "rate": 74.42
+      }
+    },
+    "nyc": {
+      "fade1h": {
+        "events": 731,
+        "held": 383,
+        "rate": 52.39
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 545,
+        "rate": 74.56
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 589,
+        "rate": 80.68
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:56",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 183,
+        "rate": 25.03
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 535,
+        "rate": 73.19
+      }
+    },
+    "panama-city": {
+      "fade1h": {
+        "events": 724,
+        "held": 375,
+        "rate": 51.8
+      },
+      "fade2h": {
+        "events": 724,
+        "held": 572,
+        "rate": 79.01
+      },
+      "fade3h": {
+        "events": 724,
+        "held": 652,
+        "rate": 90.06
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "12:25",
+      "peak_pct": {
+        "attempts": 726,
+        "hits": 186,
+        "rate": 25.62
+      },
+      "window_12_to_5_pct": {
+        "attempts": 726,
+        "hits": 536,
+        "rate": 73.83
+      }
+    },
+    "paris": {
+      "fade1h": {
+        "events": 730,
+        "held": 258,
+        "rate": 35.34
+      },
+      "fade2h": {
+        "events": 729,
+        "held": 447,
+        "rate": 61.32
+      },
+      "fade3h": {
+        "events": 728,
+        "held": 532,
+        "rate": 73.08
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:33",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 139,
+        "rate": 19.02
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 524,
+        "rate": 71.68
+      }
+    },
+    "san-francisco": {
+      "fade1h": {
+        "events": 731,
+        "held": 411,
+        "rate": 56.22
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 611,
+        "rate": 83.58
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 690,
+        "rate": 94.39
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "13:07",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 192,
+        "rate": 26.27
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 637,
+        "rate": 87.14
+      }
+    },
+    "sao-paulo": {
+      "fade1h": {
+        "events": 731,
+        "held": 420,
+        "rate": 57.46
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 635,
+        "rate": 86.87
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 690,
+        "rate": 94.52
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "13:15",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 239,
+        "rate": 32.69
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 660,
+        "rate": 90.29
+      }
+    },
+    "seattle": {
+      "fade1h": {
+        "events": 730,
+        "held": 348,
+        "rate": 47.67
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 555,
+        "rate": 76.03
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 632,
+        "rate": 86.58
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:58",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 176,
+        "rate": 24.08
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 566,
+        "rate": 77.43
+      }
+    },
+    "seoul": {
+      "fade1h": {
+        "events": 730,
+        "held": 369,
+        "rate": 50.55
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 561,
+        "rate": 76.85
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 636,
+        "rate": 87.12
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "11:54",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 173,
+        "rate": 23.67
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 542,
+        "rate": 74.15
+      }
+    },
+    "shanghai": {
+      "fade1h": {
+        "events": 730,
+        "held": 433,
+        "rate": 59.32
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 598,
+        "rate": 81.92
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 679,
+        "rate": 93.01
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "11:03",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 184,
+        "rate": 25.17
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 424,
+        "rate": 58.0
+      }
+    },
+    "shenzhen": {
+      "fade1h": {
+        "events": 730,
+        "held": 324,
+        "rate": 44.38
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 503,
+        "rate": 68.9
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 604,
+        "rate": 82.74
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "11:56",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 154,
+        "rate": 21.07
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 501,
+        "rate": 68.54
+      }
+    },
+    "singapore": {
+      "fade1h": {
+        "events": 730,
+        "held": 295,
+        "rate": 40.41
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 540,
+        "rate": 73.97
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 645,
+        "rate": 88.36
+      },
+      "mode_peak_hour": 13,
+      "peak_hour_avg_str": "12:23",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 174,
+        "rate": 23.8
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 557,
+        "rate": 76.2
+      }
+    },
+    "taipei": {
+      "fade1h": {
+        "events": 664,
+        "held": 500,
+        "rate": 75.3
+      },
+      "fade2h": {
+        "events": 652,
+        "held": 558,
+        "rate": 85.58
+      },
+      "fade3h": {
+        "events": 648,
+        "held": 600,
+        "rate": 92.59
+      },
+      "mode_peak_hour": 11,
+      "peak_hour_avg_str": "10:21",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 157,
+        "rate": 21.48
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 282,
+        "rate": 38.58
+      }
+    },
+    "tokyo": {
+      "fade1h": {
+        "events": 730,
+        "held": 364,
+        "rate": 49.86
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 531,
+        "rate": 72.74
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 627,
+        "rate": 85.89
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "11:33",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 145,
+        "rate": 19.84
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 459,
+        "rate": 62.79
+      }
+    },
+    "toronto": {
+      "fade1h": {
+        "events": 731,
+        "held": 277,
+        "rate": 37.89
+      },
+      "fade2h": {
+        "events": 731,
+        "held": 461,
+        "rate": 63.06
+      },
+      "fade3h": {
+        "events": 731,
+        "held": 555,
+        "rate": 75.92
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:54",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 126,
+        "rate": 17.24
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 486,
+        "rate": 66.48
+      }
+    },
+    "warsaw": {
+      "fade1h": {
+        "events": 730,
+        "held": 315,
+        "rate": 43.15
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 530,
+        "rate": 72.6
+      },
+      "fade3h": {
+        "events": 729,
+        "held": 603,
+        "rate": 82.72
+      },
+      "mode_peak_hour": 14,
+      "peak_hour_avg_str": "12:18",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 159,
+        "rate": 21.75
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 537,
+        "rate": 73.46
+      }
+    },
+    "wellington": {
+      "fade1h": {
+        "events": 730,
+        "held": 354,
+        "rate": 48.49
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 494,
+        "rate": 67.67
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 582,
+        "rate": 79.73
+      },
+      "mode_peak_hour": 12,
+      "peak_hour_avg_str": "11:13",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 153,
+        "rate": 20.93
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 444,
+        "rate": 60.74
+      }
+    },
+    "wuhan": {
+      "fade1h": {
+        "events": 730,
+        "held": 255,
+        "rate": 34.93
+      },
+      "fade2h": {
+        "events": 730,
+        "held": 530,
+        "rate": 72.6
+      },
+      "fade3h": {
+        "events": 730,
+        "held": 635,
+        "rate": 86.99
+      },
+      "mode_peak_hour": 15,
+      "peak_hour_avg_str": "13:00",
+      "peak_pct": {
+        "attempts": 731,
+        "hits": 188,
+        "rate": 25.72
+      },
+      "window_12_to_5_pct": {
+        "attempts": 731,
+        "hits": 608,
+        "rate": 83.17
+      }
+    }
+  }
+}

@@ -1,0 +1,1126 @@
+{
+  "_lineage": {
+    "script": "buynosafe_audit_17cities.py",
+    "version": "1.0",
+    "generatedAt": "2026-04-19T18:15:29.352973+00:00",
+    "asosSource": "IEM Mesonet daily.py (station-local calendar day max)",
+    "wuSource": "WU V1 historical hourly obs, grouped by station-local date",
+    "minObsPerDay": 18,
+    "comparisonUnit": "native (F for US, C for international)",
+    "buyNoSafeRule": "wuLowerCount === 0 over all valid comparison days"
+  },
+  "cities": {
+    "denver": {
+      "slug": "denver",
+      "station": "KBKF",
+      "country": "US",
+      "unit": "F",
+      "timezone": "America/Denver",
+      "totalDays": 713,
+      "exactMatchPct": 61.9,
+      "within1Pct": 84.4,
+      "within2Pct": 92.8,
+      "meanBias": -0.91,
+      "maxDisagreement": 17,
+      "wuNeverLower": false,
+      "wuLowerCount": 270,
+      "wuHigherCount": 2,
+      "buyNoSafe": false,
+      "grade": "C",
+      "wuLowerDays": [
+        {
+          "date": "2024-04-08",
+          "asos": 56,
+          "wu": 55,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-10",
+          "asos": 58,
+          "wu": 56,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-12",
+          "asos": 76,
+          "wu": 75,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-13",
+          "asos": 76,
+          "wu": 75,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-16",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-22",
+          "asos": 74,
+          "wu": 73,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-25",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-26",
+          "asos": 68,
+          "wu": 67,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-28",
+          "asos": 61,
+          "wu": 60,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-29",
+          "asos": 66,
+          "wu": 65,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-01",
+          "asos": 72,
+          "wu": 68,
+          "diff": -4
+        },
+        {
+          "date": "2024-05-03",
+          "asos": 76,
+          "wu": 75,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-04",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-08",
+          "asos": 59,
+          "wu": 58,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-09",
+          "asos": 54,
+          "wu": 53,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-11",
+          "asos": 66,
+          "wu": 65,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-12",
+          "asos": 59,
+          "wu": 58,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-13",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-14",
+          "asos": 77,
+          "wu": 75,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-15",
+          "asos": 68,
+          "wu": 67,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2025-06-05",
+          "asos": 70,
+          "wu": 72,
+          "diff": 2
+        }
+      ],
+      "skippedIncomplete": 15,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "los-angeles": {
+      "slug": "los-angeles",
+      "station": "KLAX",
+      "country": "US",
+      "unit": "F",
+      "timezone": "America/Los_Angeles",
+      "totalDays": 727,
+      "exactMatchPct": 35.5,
+      "within1Pct": 84.2,
+      "within2Pct": 96.7,
+      "meanBias": -0.83,
+      "maxDisagreement": 8,
+      "wuNeverLower": false,
+      "wuLowerCount": 466,
+      "wuHigherCount": 3,
+      "buyNoSafe": false,
+      "grade": "C",
+      "wuLowerDays": [
+        {
+          "date": "2024-04-09",
+          "asos": 78,
+          "wu": 77,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-10",
+          "asos": 74,
+          "wu": 73,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-11",
+          "asos": 64,
+          "wu": 63,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-14",
+          "asos": 61,
+          "wu": 60,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-17",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-18",
+          "asos": 69,
+          "wu": 64,
+          "diff": -5
+        },
+        {
+          "date": "2024-04-19",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-21",
+          "asos": 63,
+          "wu": 61,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-23",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-25",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-27",
+          "asos": 67,
+          "wu": 66,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-28",
+          "asos": 68,
+          "wu": 66,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-29",
+          "asos": 67,
+          "wu": 66,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-30",
+          "asos": 69,
+          "wu": 68,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-01",
+          "asos": 68,
+          "wu": 67,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-02",
+          "asos": 69,
+          "wu": 67,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-03",
+          "asos": 68,
+          "wu": 66,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-05",
+          "asos": 66,
+          "wu": 65,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-06",
+          "asos": 66,
+          "wu": 65,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-07",
+          "asos": 68,
+          "wu": 67,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2026-04-07",
+          "asos": 61,
+          "wu": 69,
+          "diff": 8
+        }
+      ],
+      "skippedIncomplete": 4,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "austin": {
+      "slug": "austin",
+      "station": "KAUS",
+      "country": "US",
+      "unit": "F",
+      "timezone": "America/Chicago",
+      "totalDays": 728,
+      "exactMatchPct": 36.0,
+      "within1Pct": 89.7,
+      "within2Pct": 99.0,
+      "meanBias": -0.75,
+      "maxDisagreement": 3,
+      "wuNeverLower": false,
+      "wuLowerCount": 466,
+      "wuHigherCount": 0,
+      "buyNoSafe": false,
+      "grade": "C",
+      "wuLowerDays": [
+        {
+          "date": "2024-04-07",
+          "asos": 81,
+          "wu": 80,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-12",
+          "asos": 81,
+          "wu": 80,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-15",
+          "asos": 84,
+          "wu": 83,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-17",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-18",
+          "asos": 89,
+          "wu": 88,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-21",
+          "asos": 70,
+          "wu": 68,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-23",
+          "asos": 74,
+          "wu": 73,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-27",
+          "asos": 84,
+          "wu": 83,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-29",
+          "asos": 89,
+          "wu": 88,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-30",
+          "asos": 87,
+          "wu": 86,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-01",
+          "asos": 80,
+          "wu": 79,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-03",
+          "asos": 76,
+          "wu": 75,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-05",
+          "asos": 81,
+          "wu": 80,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-06",
+          "asos": 87,
+          "wu": 85,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-07",
+          "asos": 90,
+          "wu": 89,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-10",
+          "asos": 86,
+          "wu": 84,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-11",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-13",
+          "asos": 80,
+          "wu": 79,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-18",
+          "asos": 96,
+          "wu": 95,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-20",
+          "asos": 94,
+          "wu": 93,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 3,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "houston": {
+      "slug": "houston",
+      "station": "KHOU",
+      "country": "US",
+      "unit": "F",
+      "timezone": "America/Chicago",
+      "totalDays": 729,
+      "exactMatchPct": 36.4,
+      "within1Pct": 88.1,
+      "within2Pct": 97.8,
+      "meanBias": -0.59,
+      "maxDisagreement": 86,
+      "wuNeverLower": false,
+      "wuLowerCount": 458,
+      "wuHigherCount": 6,
+      "buyNoSafe": false,
+      "grade": "C",
+      "wuLowerDays": [
+        {
+          "date": "2024-04-07",
+          "asos": 86,
+          "wu": 84,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-08",
+          "asos": 80,
+          "wu": 79,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-11",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-15",
+          "asos": 81,
+          "wu": 79,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-16",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-17",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-18",
+          "asos": 86,
+          "wu": 85,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-19",
+          "asos": 85,
+          "wu": 84,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-21",
+          "asos": 73,
+          "wu": 72,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-24",
+          "asos": 85,
+          "wu": 84,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-25",
+          "asos": 83,
+          "wu": 81,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-27",
+          "asos": 83,
+          "wu": 82,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-28",
+          "asos": 85,
+          "wu": 84,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-29",
+          "asos": 82,
+          "wu": 80,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-01",
+          "asos": 85,
+          "wu": 83,
+          "diff": -2
+        },
+        {
+          "date": "2024-05-02",
+          "asos": 82,
+          "wu": 81,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-04",
+          "asos": 86,
+          "wu": 85,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-05",
+          "asos": 80,
+          "wu": 79,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-06",
+          "asos": 87,
+          "wu": 86,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-07",
+          "asos": 87,
+          "wu": 86,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2024-05-17",
+          "asos": 74,
+          "wu": 160,
+          "diff": 86
+        },
+        {
+          "date": "2025-01-24",
+          "asos": 58,
+          "wu": 80,
+          "diff": 22
+        },
+        {
+          "date": "2025-01-26",
+          "asos": 70,
+          "wu": 77,
+          "diff": 7
+        },
+        {
+          "date": "2025-02-09",
+          "asos": 83,
+          "wu": 90,
+          "diff": 7
+        }
+      ],
+      "skippedIncomplete": 2,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "san-francisco": {
+      "slug": "san-francisco",
+      "station": "KSFO",
+      "country": "US",
+      "unit": "F",
+      "timezone": "America/Los_Angeles",
+      "totalDays": 728,
+      "exactMatchPct": 33.8,
+      "within1Pct": 84.8,
+      "within2Pct": 96.6,
+      "meanBias": -0.84,
+      "maxDisagreement": 8,
+      "wuNeverLower": false,
+      "wuLowerCount": 478,
+      "wuHigherCount": 4,
+      "buyNoSafe": false,
+      "grade": "C",
+      "wuLowerDays": [
+        {
+          "date": "2024-04-11",
+          "asos": 71,
+          "wu": 70,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-12",
+          "asos": 61,
+          "wu": 60,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-14",
+          "asos": 61,
+          "wu": 59,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-15",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-16",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-18",
+          "asos": 71,
+          "wu": 69,
+          "diff": -2
+        },
+        {
+          "date": "2024-04-21",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-22",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-25",
+          "asos": 63,
+          "wu": 62,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-27",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-28",
+          "asos": 64,
+          "wu": 63,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-29",
+          "asos": 66,
+          "wu": 65,
+          "diff": -1
+        },
+        {
+          "date": "2024-04-30",
+          "asos": 65,
+          "wu": 64,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-01",
+          "asos": 72,
+          "wu": 71,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-02",
+          "asos": 67,
+          "wu": 66,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-03",
+          "asos": 69,
+          "wu": 68,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-05",
+          "asos": 60,
+          "wu": 59,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-06",
+          "asos": 68,
+          "wu": 63,
+          "diff": -5
+        },
+        {
+          "date": "2024-05-09",
+          "asos": 84,
+          "wu": 83,
+          "diff": -1
+        },
+        {
+          "date": "2024-05-11",
+          "asos": 70,
+          "wu": 69,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2025-10-10",
+          "asos": 69,
+          "wu": 72,
+          "diff": 3
+        },
+        {
+          "date": "2026-04-07",
+          "asos": 55,
+          "wu": 63,
+          "diff": 8
+        }
+      ],
+      "skippedIncomplete": 3,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "milan": {
+      "slug": "milan",
+      "station": "LIMC",
+      "country": "IT",
+      "unit": "C",
+      "timezone": "Europe/Rome",
+      "totalDays": 730,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "jakarta": {
+      "slug": "jakarta",
+      "station": "WIHH",
+      "country": "ID",
+      "unit": "C",
+      "timezone": "Asia/Jakarta",
+      "totalDays": 728,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 3,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "kuala-lumpur": {
+      "slug": "kuala-lumpur",
+      "station": "WMKK",
+      "country": "MY",
+      "unit": "C",
+      "timezone": "Asia/Kuala_Lumpur",
+      "totalDays": 731,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 0,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "munich": {
+      "slug": "munich",
+      "station": "EDDM",
+      "country": "DE",
+      "unit": "C",
+      "timezone": "Europe/Berlin",
+      "totalDays": 730,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "busan": {
+      "slug": "busan",
+      "station": "RKPK",
+      "country": "KR",
+      "unit": "C",
+      "timezone": "Asia/Seoul",
+      "totalDays": 731,
+      "exactMatchPct": 99.9,
+      "within1Pct": 99.9,
+      "within2Pct": 99.9,
+      "meanBias": 0.0,
+      "maxDisagreement": 3,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 1,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2026-02-08",
+          "asos": -3,
+          "wu": 0,
+          "diff": 3
+        }
+      ],
+      "skippedIncomplete": 0,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "lucknow": {
+      "slug": "lucknow",
+      "station": "VILK",
+      "country": "IN",
+      "unit": "C",
+      "timezone": "Asia/Kolkata",
+      "totalDays": 667,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 46,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "amsterdam": {
+      "slug": "amsterdam",
+      "station": "EHAM",
+      "country": "NL",
+      "unit": "C",
+      "timezone": "Europe/Amsterdam",
+      "totalDays": 730,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "warsaw": {
+      "slug": "warsaw",
+      "station": "EPWA",
+      "country": "PL",
+      "unit": "C",
+      "timezone": "Europe/Warsaw",
+      "totalDays": 730,
+      "exactMatchPct": 99.9,
+      "within1Pct": 99.9,
+      "within2Pct": 99.9,
+      "meanBias": 0.11,
+      "maxDisagreement": 78,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 1,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2024-12-16",
+          "asos": 10,
+          "wu": 88,
+          "diff": 78
+        }
+      ],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "helsinki": {
+      "slug": "helsinki",
+      "station": "EFHK",
+      "country": "FI",
+      "unit": "C",
+      "timezone": "Europe/Helsinki",
+      "totalDays": 730,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "panama-city": {
+      "slug": "panama-city",
+      "station": "MPMG",
+      "country": "PA",
+      "unit": "C",
+      "timezone": "America/Panama",
+      "totalDays": 715,
+      "exactMatchPct": 99.3,
+      "within1Pct": 99.7,
+      "within2Pct": 99.7,
+      "meanBias": 0.01,
+      "maxDisagreement": 5,
+      "wuNeverLower": false,
+      "wuLowerCount": 2,
+      "wuHigherCount": 3,
+      "buyNoSafe": false,
+      "grade": "A",
+      "wuLowerDays": [
+        {
+          "date": "2024-06-11",
+          "asos": 30,
+          "wu": 29,
+          "diff": -1
+        },
+        {
+          "date": "2024-06-29",
+          "asos": 31,
+          "wu": 30,
+          "diff": -1
+        }
+      ],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2024-09-17",
+          "asos": 27,
+          "wu": 32,
+          "diff": 5
+        },
+        {
+          "date": "2026-04-07",
+          "asos": 29,
+          "wu": 33,
+          "diff": 4
+        }
+      ],
+      "skippedIncomplete": 11,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "mexico-city": {
+      "slug": "mexico-city",
+      "station": "MMMX",
+      "country": "MX",
+      "unit": "C",
+      "timezone": "America/Mexico_City",
+      "totalDays": 731,
+      "exactMatchPct": 99.9,
+      "within1Pct": 99.9,
+      "within2Pct": 99.9,
+      "meanBias": 0.01,
+      "maxDisagreement": 9,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 1,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [
+        {
+          "date": "2026-04-07",
+          "asos": 16,
+          "wu": 25,
+          "diff": 9
+        }
+      ],
+      "skippedIncomplete": 0,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    },
+    "madrid": {
+      "slug": "madrid",
+      "station": "LEMD",
+      "country": "ES",
+      "unit": "C",
+      "timezone": "Europe/Madrid",
+      "totalDays": 730,
+      "exactMatchPct": 100.0,
+      "within1Pct": 100.0,
+      "within2Pct": 100.0,
+      "meanBias": 0.0,
+      "maxDisagreement": 0.0,
+      "wuNeverLower": true,
+      "wuLowerCount": 0,
+      "wuHigherCount": 0,
+      "buyNoSafe": true,
+      "grade": "A+",
+      "wuLowerDays": [],
+      "wuHigherDays_2plus": [],
+      "skippedIncomplete": 1,
+      "skippedMissingWU": 0,
+      "skippedMissingASOS": 0,
+      "minObsThreshold": 18
+    }
+  }
+}

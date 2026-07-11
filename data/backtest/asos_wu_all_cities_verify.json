@@ -1,0 +1,1394 @@
+{
+  "generated": "2026-03-04T15:46:13.022497",
+  "date_range": "2024-03-01 to 2026-02-28",
+  "dst_exclusions": ["2024-03-10", "2025-03-09", "2026-03-08"],
+  "cities": {
+    "NYC": {
+      "city": "NYC",
+      "station": "KLGA",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 707,
+      "exact_match_pct": 97.2,
+      "wu_higher_count": 20,
+      "wu_higher_pct": 2.8,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.03,
+      "avg_abs_diff_f": 0.03,
+      "max_abs_diff_f": 2.0,
+      "mismatch_total": 20,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2025-04-02",
+          "asos_raw": 46.0,
+          "wu_raw": 48.0,
+          "asos_rounded": 46,
+          "wu_rounded": 48,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-26",
+          "asos_raw": 51.0,
+          "wu_raw": 52.0,
+          "asos_rounded": 51,
+          "wu_rounded": 52,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-04-24",
+          "asos_raw": 68.0,
+          "wu_raw": 69.0,
+          "asos_rounded": 68,
+          "wu_rounded": 69,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-05-05",
+          "asos_raw": 53.0,
+          "wu_raw": 54.0,
+          "asos_rounded": 53,
+          "wu_rounded": 54,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-07-11",
+          "asos_raw": 88.0,
+          "wu_raw": 89.0,
+          "asos_rounded": 88,
+          "wu_rounded": 89,
+          "diff": -1.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-04-02",
+          "asos_raw": 46.0,
+          "wu_raw": 48.0,
+          "asos_rounded": 46,
+          "wu_rounded": 48,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-26",
+          "asos_raw": 51.0,
+          "wu_raw": 52.0,
+          "asos_rounded": 51,
+          "wu_rounded": 52,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-04-24",
+          "asos_raw": 68.0,
+          "wu_raw": 69.0,
+          "asos_rounded": 68,
+          "wu_rounded": 69,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-05-05",
+          "asos_raw": 53.0,
+          "wu_raw": 54.0,
+          "asos_rounded": 53,
+          "wu_rounded": 54,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-07-11",
+          "asos_raw": 88.0,
+          "wu_raw": 89.0,
+          "asos_rounded": 88,
+          "wu_rounded": 89,
+          "diff": -1.0
+        }
+      ]
+    },
+    "Chicago": {
+      "city": "Chicago",
+      "station": "KORD",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 703,
+      "exact_match_pct": 96.7,
+      "wu_higher_count": 24,
+      "wu_higher_pct": 3.3,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.04,
+      "avg_abs_diff_f": 0.04,
+      "max_abs_diff_f": 4.0,
+      "mismatch_total": 24,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2025-03-15",
+          "asos_raw": 65.0,
+          "wu_raw": 69.0,
+          "asos_rounded": 65,
+          "wu_rounded": 69,
+          "diff": -4.0
+        },
+        {
+          "date": "2024-05-02",
+          "asos_raw": 77.0,
+          "wu_raw": 79.0,
+          "asos_rounded": 77,
+          "wu_rounded": 79,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-11-28",
+          "asos_raw": 33.0,
+          "wu_raw": 35.0,
+          "asos_rounded": 33,
+          "wu_rounded": 35,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-04-07",
+          "asos_raw": 43.0,
+          "wu_raw": 45.0,
+          "asos_rounded": 43,
+          "wu_rounded": 45,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-12-13",
+          "asos_raw": 24.0,
+          "wu_raw": 26.0,
+          "asos_rounded": 24,
+          "wu_rounded": 26,
+          "diff": -2.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-03-15",
+          "asos_raw": 65.0,
+          "wu_raw": 69.0,
+          "asos_rounded": 65,
+          "wu_rounded": 69,
+          "diff": -4.0
+        },
+        {
+          "date": "2024-05-02",
+          "asos_raw": 77.0,
+          "wu_raw": 79.0,
+          "asos_rounded": 77,
+          "wu_rounded": 79,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-11-28",
+          "asos_raw": 33.0,
+          "wu_raw": 35.0,
+          "asos_rounded": 33,
+          "wu_rounded": 35,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-04-07",
+          "asos_raw": 43.0,
+          "wu_raw": 45.0,
+          "asos_rounded": 43,
+          "wu_rounded": 45,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-12-13",
+          "asos_raw": 24.0,
+          "wu_raw": 26.0,
+          "asos_rounded": 24,
+          "wu_rounded": 26,
+          "diff": -2.0
+        }
+      ]
+    },
+    "Miami": {
+      "city": "Miami",
+      "station": "KMIA",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 699,
+      "exact_match_pct": 96.1,
+      "wu_higher_count": 28,
+      "wu_higher_pct": 3.9,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.04,
+      "avg_abs_diff_f": 0.04,
+      "max_abs_diff_f": 2.0,
+      "mismatch_total": 28,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2024-08-02",
+          "asos_raw": 92.0,
+          "wu_raw": 94.0,
+          "asos_rounded": 92,
+          "wu_rounded": 94,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-08-05",
+          "asos_raw": 91.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 91,
+          "wu_rounded": 93,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-08-23",
+          "asos_raw": 88.0,
+          "wu_raw": 90.0,
+          "asos_rounded": 88,
+          "wu_rounded": 90,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-06-24",
+          "asos_raw": 87.0,
+          "wu_raw": 88.0,
+          "asos_rounded": 87,
+          "wu_rounded": 88,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-08-13",
+          "asos_raw": 92.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 92,
+          "wu_rounded": 93,
+          "diff": -1.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2024-08-02",
+          "asos_raw": 92.0,
+          "wu_raw": 94.0,
+          "asos_rounded": 92,
+          "wu_rounded": 94,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-08-05",
+          "asos_raw": 91.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 91,
+          "wu_rounded": 93,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-08-23",
+          "asos_raw": 88.0,
+          "wu_raw": 90.0,
+          "asos_rounded": 88,
+          "wu_rounded": 90,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-06-24",
+          "asos_raw": 87.0,
+          "wu_raw": 88.0,
+          "asos_rounded": 87,
+          "wu_rounded": 88,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-08-13",
+          "asos_raw": 92.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 92,
+          "wu_rounded": 93,
+          "diff": -1.0
+        }
+      ]
+    },
+    "Dallas": {
+      "city": "Dallas",
+      "station": "KDAL",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 717,
+      "exact_match_pct": 98.6,
+      "wu_higher_count": 10,
+      "wu_higher_pct": 1.4,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.02,
+      "avg_abs_diff_f": 0.02,
+      "max_abs_diff_f": 4.0,
+      "mismatch_total": 10,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2025-01-18",
+          "asos_raw": 53.0,
+          "wu_raw": 57.0,
+          "asos_rounded": 53,
+          "wu_rounded": 57,
+          "diff": -4.0
+        },
+        {
+          "date": "2024-03-16",
+          "asos_raw": 62.0,
+          "wu_raw": 63.0,
+          "asos_rounded": 62,
+          "wu_rounded": 63,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-12-04",
+          "asos_raw": 53.0,
+          "wu_raw": 54.0,
+          "asos_rounded": 53,
+          "wu_rounded": 54,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-12-26",
+          "asos_raw": 59.0,
+          "wu_raw": 60.0,
+          "asos_rounded": 59,
+          "wu_rounded": 60,
+          "diff": -1.0
+        },
+        {
+          "date": "2025-04-04",
+          "asos_raw": 59.0,
+          "wu_raw": 60.0,
+          "asos_rounded": 59,
+          "wu_rounded": 60,
+          "diff": -1.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-01-18",
+          "asos_raw": 53.0,
+          "wu_raw": 57.0,
+          "asos_rounded": 53,
+          "wu_rounded": 57,
+          "diff": -4.0
+        },
+        {
+          "date": "2024-03-16",
+          "asos_raw": 62.0,
+          "wu_raw": 63.0,
+          "asos_rounded": 62,
+          "wu_rounded": 63,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-12-04",
+          "asos_raw": 53.0,
+          "wu_raw": 54.0,
+          "asos_rounded": 53,
+          "wu_rounded": 54,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-12-26",
+          "asos_raw": 59.0,
+          "wu_raw": 60.0,
+          "asos_rounded": 59,
+          "wu_rounded": 60,
+          "diff": -1.0
+        },
+        {
+          "date": "2025-04-04",
+          "asos_raw": 59.0,
+          "wu_raw": 60.0,
+          "asos_rounded": 59,
+          "wu_rounded": 60,
+          "diff": -1.0
+        }
+      ]
+    },
+    "Atlanta": {
+      "city": "Atlanta",
+      "station": "KATL",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 706,
+      "exact_match_pct": 97.1,
+      "wu_higher_count": 21,
+      "wu_higher_pct": 2.9,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.03,
+      "avg_abs_diff_f": 0.03,
+      "max_abs_diff_f": 2.0,
+      "mismatch_total": 21,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2024-07-06",
+          "asos_raw": 91.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 91,
+          "wu_rounded": 93,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-06-18",
+          "asos_raw": 86.0,
+          "wu_raw": 88.0,
+          "asos_rounded": 86,
+          "wu_rounded": 88,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 69.0,
+          "wu_raw": 70.0,
+          "asos_rounded": 69,
+          "wu_rounded": 70,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-03-05",
+          "asos_raw": 60.0,
+          "wu_raw": 61.0,
+          "asos_rounded": 60,
+          "wu_rounded": 61,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-03-21",
+          "asos_raw": 75.0,
+          "wu_raw": 76.0,
+          "asos_rounded": 75,
+          "wu_rounded": 76,
+          "diff": -1.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2024-07-06",
+          "asos_raw": 91.0,
+          "wu_raw": 93.0,
+          "asos_rounded": 91,
+          "wu_rounded": 93,
+          "diff": -2.0
+        },
+        {
+          "date": "2025-06-18",
+          "asos_raw": 86.0,
+          "wu_raw": 88.0,
+          "asos_rounded": 86,
+          "wu_rounded": 88,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 69.0,
+          "wu_raw": 70.0,
+          "asos_rounded": 69,
+          "wu_rounded": 70,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-03-05",
+          "asos_raw": 60.0,
+          "wu_raw": 61.0,
+          "asos_rounded": 60,
+          "wu_rounded": 61,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-03-21",
+          "asos_raw": 75.0,
+          "wu_raw": 76.0,
+          "asos_rounded": 75,
+          "wu_rounded": 76,
+          "diff": -1.0
+        }
+      ]
+    },
+    "Seattle": {
+      "city": "Seattle",
+      "station": "KSEA",
+      "wu_unit": "F",
+      "total_days": 727,
+      "date_range": "2024-03-01 to 2026-02-27",
+      "exact_match_count": 701,
+      "exact_match_pct": 96.4,
+      "wu_higher_count": 26,
+      "wu_higher_pct": 3.6,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": -0.04,
+      "avg_abs_diff_f": 0.04,
+      "max_abs_diff_f": 2.0,
+      "mismatch_total": 26,
+      "wu_higher_pct_of_mismatch": 100.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [
+        {
+          "date": "2025-12-17",
+          "asos_raw": 50.0,
+          "wu_raw": 52.0,
+          "asos_rounded": 50,
+          "wu_rounded": 52,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-21",
+          "asos_raw": 55.0,
+          "wu_raw": 56.0,
+          "asos_rounded": 55,
+          "wu_rounded": 56,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-04-08",
+          "asos_raw": 52.0,
+          "wu_raw": 53.0,
+          "asos_rounded": 52,
+          "wu_rounded": 53,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-06-17",
+          "asos_raw": 60.0,
+          "wu_raw": 61.0,
+          "asos_rounded": 60,
+          "wu_rounded": 61,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-08-20",
+          "asos_raw": 66.0,
+          "wu_raw": 67.0,
+          "asos_rounded": 66,
+          "wu_rounded": 67,
+          "diff": -1.0
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-12-17",
+          "asos_raw": 50.0,
+          "wu_raw": 52.0,
+          "asos_rounded": 50,
+          "wu_rounded": 52,
+          "diff": -2.0
+        },
+        {
+          "date": "2024-03-21",
+          "asos_raw": 55.0,
+          "wu_raw": 56.0,
+          "asos_rounded": 55,
+          "wu_rounded": 56,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-04-08",
+          "asos_raw": 52.0,
+          "wu_raw": 53.0,
+          "asos_rounded": 52,
+          "wu_rounded": 53,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-06-17",
+          "asos_raw": 60.0,
+          "wu_raw": 61.0,
+          "asos_rounded": 60,
+          "wu_rounded": 61,
+          "diff": -1.0
+        },
+        {
+          "date": "2024-08-20",
+          "asos_raw": 66.0,
+          "wu_raw": 67.0,
+          "asos_rounded": 66,
+          "wu_rounded": 67,
+          "diff": -1.0
+        }
+      ]
+    },
+    "London": {
+      "city": "London",
+      "station": "EGLL",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 348,
+      "exact_match_pct": 47.7,
+      "wu_higher_count": 243,
+      "wu_higher_pct": 33.3,
+      "wu_lower_count": 139,
+      "wu_lower_pct": 19.0,
+      "avg_diff_f": -0.26,
+      "avg_abs_diff_f": 1.1,
+      "max_abs_diff_f": 10.8,
+      "mismatch_total": 382,
+      "wu_higher_pct_of_mismatch": 63.6,
+      "wu_lower_pct_of_mismatch": 36.4,
+      "wu_never_lower": false,
+      "worst_wu_lower": [
+        {
+          "date": "2025-03-30",
+          "asos_raw": 62.6,
+          "wu_raw": 51.8,
+          "asos_rounded": 63,
+          "wu_rounded": 52,
+          "diff": 10.8
+        },
+        {
+          "date": "2024-03-31",
+          "asos_raw": 55.4,
+          "wu_raw": 46.4,
+          "asos_rounded": 55,
+          "wu_rounded": 46,
+          "diff": 9.0
+        },
+        {
+          "date": "2024-09-01",
+          "asos_raw": 84.2,
+          "wu_raw": 78.8,
+          "asos_rounded": 84,
+          "wu_rounded": 79,
+          "diff": 5.4
+        },
+        {
+          "date": "2025-07-12",
+          "asos_raw": 86.0,
+          "wu_raw": 80.6,
+          "asos_rounded": 86,
+          "wu_rounded": 81,
+          "diff": 5.4
+        },
+        {
+          "date": "2024-05-08",
+          "asos_raw": 69.8,
+          "wu_raw": 66.2,
+          "asos_rounded": 70,
+          "wu_rounded": 66,
+          "diff": 3.6
+        }
+      ],
+      "worst_wu_higher": [
+        {
+          "date": "2024-08-06",
+          "asos_raw": 69.8,
+          "wu_raw": 75.2,
+          "asos_rounded": 70,
+          "wu_rounded": 75,
+          "diff": -5.4
+        },
+        {
+          "date": "2024-11-27",
+          "asos_raw": 46.4,
+          "wu_raw": 51.8,
+          "asos_rounded": 46,
+          "wu_rounded": 52,
+          "diff": -5.4
+        },
+        {
+          "date": "2025-03-27",
+          "asos_raw": 55.4,
+          "wu_raw": 60.8,
+          "asos_rounded": 55,
+          "wu_rounded": 61,
+          "diff": -5.4
+        },
+        {
+          "date": "2025-04-13",
+          "asos_raw": 59.0,
+          "wu_raw": 64.4,
+          "asos_rounded": 59,
+          "wu_rounded": 64,
+          "diff": -5.4
+        },
+        {
+          "date": "2025-05-12",
+          "asos_raw": 71.6,
+          "wu_raw": 77.0,
+          "asos_rounded": 72,
+          "wu_rounded": 77,
+          "diff": -5.4
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-03-30",
+          "asos_raw": 62.6,
+          "wu_raw": 51.8,
+          "asos_rounded": 63,
+          "wu_rounded": 52,
+          "diff": 10.8
+        },
+        {
+          "date": "2024-03-31",
+          "asos_raw": 55.4,
+          "wu_raw": 46.4,
+          "asos_rounded": 55,
+          "wu_rounded": 46,
+          "diff": 9.0
+        },
+        {
+          "date": "2024-08-06",
+          "asos_raw": 69.8,
+          "wu_raw": 75.2,
+          "asos_rounded": 70,
+          "wu_rounded": 75,
+          "diff": -5.4
+        },
+        {
+          "date": "2024-09-01",
+          "asos_raw": 84.2,
+          "wu_raw": 78.8,
+          "asos_rounded": 84,
+          "wu_rounded": 79,
+          "diff": 5.4
+        },
+        {
+          "date": "2024-11-27",
+          "asos_raw": 46.4,
+          "wu_raw": 51.8,
+          "asos_rounded": 46,
+          "wu_rounded": 52,
+          "diff": -5.4
+        }
+      ]
+    },
+    "Paris": {
+      "city": "Paris",
+      "station": "LFPG",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 728,
+      "exact_match_pct": 99.7,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 2,
+      "wu_lower_pct": 0.3,
+      "avg_diff_f": 0.04,
+      "avg_abs_diff_f": 0.04,
+      "max_abs_diff_f": 18.0,
+      "mismatch_total": 2,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 100.0,
+      "wu_never_lower": false,
+      "worst_wu_lower": [
+        {
+          "date": "2025-03-30",
+          "asos_raw": 62.6,
+          "wu_raw": 44.6,
+          "asos_rounded": 63,
+          "wu_rounded": 45,
+          "diff": 18.0
+        },
+        {
+          "date": "2024-03-31",
+          "asos_raw": 57.2,
+          "wu_raw": 46.4,
+          "asos_rounded": 57,
+          "wu_rounded": 46,
+          "diff": 10.8
+        }
+      ],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2025-03-30",
+          "asos_raw": 62.6,
+          "wu_raw": 44.6,
+          "asos_rounded": 63,
+          "wu_rounded": 45,
+          "diff": 18.0
+        },
+        {
+          "date": "2024-03-31",
+          "asos_raw": 57.2,
+          "wu_raw": 46.4,
+          "asos_rounded": 57,
+          "wu_rounded": 46,
+          "diff": 10.8
+        },
+        {
+          "date": "2024-03-01",
+          "asos_raw": 50.0,
+          "wu_raw": 50.0,
+          "asos_rounded": 50,
+          "wu_rounded": 50,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-02",
+          "asos_raw": 46.4,
+          "wu_raw": 46.4,
+          "asos_rounded": 46,
+          "wu_rounded": 46,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 48.2,
+          "wu_raw": 48.2,
+          "asos_rounded": 48,
+          "wu_rounded": 48,
+          "diff": 0.0
+        }
+      ]
+    },
+    "Ankara": {
+      "city": "Ankara",
+      "station": "LTAC",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 730,
+      "exact_match_pct": 100.0,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": 0.0,
+      "avg_abs_diff_f": 0.0,
+      "max_abs_diff_f": 0.0,
+      "mismatch_total": 0,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2024-03-01",
+          "asos_raw": 59.0,
+          "wu_raw": 59.0,
+          "asos_rounded": 59,
+          "wu_rounded": 59,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-02",
+          "asos_raw": 62.6,
+          "wu_raw": 62.6,
+          "asos_rounded": 63,
+          "wu_rounded": 63,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 57.2,
+          "wu_raw": 57.2,
+          "asos_rounded": 57,
+          "wu_rounded": 57,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-04",
+          "asos_raw": 55.4,
+          "wu_raw": 55.4,
+          "asos_rounded": 55,
+          "wu_rounded": 55,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-05",
+          "asos_raw": 57.2,
+          "wu_raw": 57.2,
+          "asos_rounded": 57,
+          "wu_rounded": 57,
+          "diff": 0.0
+        }
+      ]
+    },
+    "Buenos Aires": {
+      "city": "Buenos Aires",
+      "station": "SAEZ",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 730,
+      "exact_match_pct": 100.0,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": 0.0,
+      "avg_abs_diff_f": 0.0,
+      "max_abs_diff_f": 0.0,
+      "mismatch_total": 0,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2024-03-01",
+          "asos_raw": 84.2,
+          "wu_raw": 84.2,
+          "asos_rounded": 84,
+          "wu_rounded": 84,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-02",
+          "asos_raw": 86.0,
+          "wu_raw": 86.0,
+          "asos_rounded": 86,
+          "wu_rounded": 86,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 78.8,
+          "wu_raw": 78.8,
+          "asos_rounded": 79,
+          "wu_rounded": 79,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-04",
+          "asos_raw": 80.6,
+          "wu_raw": 80.6,
+          "asos_rounded": 81,
+          "wu_rounded": 81,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-05",
+          "asos_raw": 75.2,
+          "wu_raw": 75.2,
+          "asos_rounded": 75,
+          "wu_rounded": 75,
+          "diff": 0.0
+        }
+      ]
+    },
+    "Sao Paulo": {
+      "city": "Sao Paulo",
+      "station": "SBGR",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 730,
+      "exact_match_pct": 100.0,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 0,
+      "wu_lower_pct": 0.0,
+      "avg_diff_f": 0.0,
+      "avg_abs_diff_f": 0.0,
+      "max_abs_diff_f": 0.0,
+      "mismatch_total": 0,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 0.0,
+      "wu_never_lower": true,
+      "worst_wu_lower": [],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2024-03-01",
+          "asos_raw": 86.0,
+          "wu_raw": 86.0,
+          "asos_rounded": 86,
+          "wu_rounded": 86,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-02",
+          "asos_raw": 84.2,
+          "wu_raw": 84.2,
+          "asos_rounded": 84,
+          "wu_rounded": 84,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 87.8,
+          "wu_raw": 87.8,
+          "asos_rounded": 88,
+          "wu_rounded": 88,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-04",
+          "asos_raw": 91.4,
+          "wu_raw": 91.4,
+          "asos_rounded": 91,
+          "wu_rounded": 91,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-05",
+          "asos_raw": 87.8,
+          "wu_raw": 87.8,
+          "asos_rounded": 88,
+          "wu_rounded": 88,
+          "diff": 0.0
+        }
+      ]
+    },
+    "Seoul": {
+      "city": "Seoul",
+      "station": "RKSI",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 696,
+      "exact_match_pct": 95.3,
+      "wu_higher_count": 19,
+      "wu_higher_pct": 2.6,
+      "wu_lower_count": 15,
+      "wu_lower_pct": 2.1,
+      "avg_diff_f": -0.01,
+      "avg_abs_diff_f": 0.08,
+      "max_abs_diff_f": 1.8,
+      "mismatch_total": 34,
+      "wu_higher_pct_of_mismatch": 55.9,
+      "wu_lower_pct_of_mismatch": 44.1,
+      "wu_never_lower": false,
+      "worst_wu_lower": [
+        {
+          "date": "2025-05-31",
+          "asos_raw": 73.4,
+          "wu_raw": 71.6,
+          "asos_rounded": 73,
+          "wu_rounded": 72,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-04",
+          "asos_raw": 77.0,
+          "wu_raw": 75.2,
+          "asos_rounded": 77,
+          "wu_rounded": 75,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-08",
+          "asos_raw": 78.8,
+          "wu_raw": 77.0,
+          "asos_rounded": 79,
+          "wu_rounded": 77,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-10",
+          "asos_raw": 73.4,
+          "wu_raw": 71.6,
+          "asos_rounded": 73,
+          "wu_rounded": 72,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-14",
+          "asos_raw": 82.4,
+          "wu_raw": 80.6,
+          "asos_rounded": 82,
+          "wu_rounded": 81,
+          "diff": 1.8
+        }
+      ],
+      "worst_wu_higher": [
+        {
+          "date": "2025-05-24",
+          "asos_raw": 68.0,
+          "wu_raw": 69.8,
+          "asos_rounded": 68,
+          "wu_rounded": 70,
+          "diff": -1.8
+        },
+        {
+          "date": "2025-07-19",
+          "asos_raw": 80.6,
+          "wu_raw": 82.4,
+          "asos_rounded": 81,
+          "wu_rounded": 82,
+          "diff": -1.8
+        },
+        {
+          "date": "2025-07-23",
+          "asos_raw": 86.0,
+          "wu_raw": 87.8,
+          "asos_rounded": 86,
+          "wu_rounded": 88,
+          "diff": -1.8
+        },
+        {
+          "date": "2025-07-29",
+          "asos_raw": 91.4,
+          "wu_raw": 93.2,
+          "asos_rounded": 91,
+          "wu_rounded": 93,
+          "diff": -1.8
+        },
+        {
+          "date": "2025-07-30",
+          "asos_raw": 89.6,
+          "wu_raw": 91.4,
+          "asos_rounded": 90,
+          "wu_rounded": 91,
+          "diff": -1.8
+        }
+      ],
+      "worst_overall": [
+        {
+          "date": "2025-05-24",
+          "asos_raw": 68.0,
+          "wu_raw": 69.8,
+          "asos_rounded": 68,
+          "wu_rounded": 70,
+          "diff": -1.8
+        },
+        {
+          "date": "2025-05-31",
+          "asos_raw": 73.4,
+          "wu_raw": 71.6,
+          "asos_rounded": 73,
+          "wu_rounded": 72,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-04",
+          "asos_raw": 77.0,
+          "wu_raw": 75.2,
+          "asos_rounded": 77,
+          "wu_rounded": 75,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-08",
+          "asos_raw": 78.8,
+          "wu_raw": 77.0,
+          "asos_rounded": 79,
+          "wu_rounded": 77,
+          "diff": 1.8
+        },
+        {
+          "date": "2025-06-10",
+          "asos_raw": 73.4,
+          "wu_raw": 71.6,
+          "asos_rounded": 73,
+          "wu_rounded": 72,
+          "diff": 1.8
+        }
+      ]
+    },
+    "Toronto": {
+      "city": "Toronto",
+      "station": "CYYZ",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 723,
+      "exact_match_pct": 99.0,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 7,
+      "wu_lower_pct": 1.0,
+      "avg_diff_f": 0.07,
+      "avg_abs_diff_f": 0.07,
+      "max_abs_diff_f": 18.0,
+      "mismatch_total": 7,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 100.0,
+      "wu_never_lower": false,
+      "worst_wu_lower": [
+        {
+          "date": "2025-03-09",
+          "asos_raw": 44.6,
+          "wu_raw": 26.6,
+          "asos_rounded": 45,
+          "wu_rounded": 27,
+          "diff": 18.0
+        },
+        {
+          "date": "2025-04-27",
+          "asos_raw": 80.6,
+          "wu_raw": 66.2,
+          "asos_rounded": 81,
+          "wu_rounded": 66,
+          "diff": 14.4
+        },
+        {
+          "date": "2024-04-16",
+          "asos_raw": 60.8,
+          "wu_raw": 48.2,
+          "asos_rounded": 61,
+          "wu_rounded": 48,
+          "diff": 12.6
+        },
+        {
+          "date": "2024-04-17",
+          "asos_raw": 50.0,
+          "wu_raw": 48.2,
+          "asos_rounded": 50,
+          "wu_rounded": 48,
+          "diff": 1.8
+        },
+        {
+          "date": "2024-06-25",
+          "asos_raw": 80.6,
+          "wu_raw": 78.8,
+          "asos_rounded": 81,
+          "wu_rounded": 79,
+          "diff": 1.8
+        }
+      ],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2025-03-09",
+          "asos_raw": 44.6,
+          "wu_raw": 26.6,
+          "asos_rounded": 45,
+          "wu_rounded": 27,
+          "diff": 18.0
+        },
+        {
+          "date": "2025-04-27",
+          "asos_raw": 80.6,
+          "wu_raw": 66.2,
+          "asos_rounded": 81,
+          "wu_rounded": 66,
+          "diff": 14.4
+        },
+        {
+          "date": "2024-04-16",
+          "asos_raw": 60.8,
+          "wu_raw": 48.2,
+          "asos_rounded": 61,
+          "wu_rounded": 48,
+          "diff": 12.6
+        },
+        {
+          "date": "2024-04-17",
+          "asos_raw": 50.0,
+          "wu_raw": 48.2,
+          "asos_rounded": 50,
+          "wu_rounded": 48,
+          "diff": 1.8
+        },
+        {
+          "date": "2024-06-25",
+          "asos_raw": 80.6,
+          "wu_raw": 78.8,
+          "asos_rounded": 81,
+          "wu_rounded": 79,
+          "diff": 1.8
+        }
+      ]
+    },
+    "Wellington": {
+      "city": "Wellington",
+      "station": "NZWN",
+      "wu_unit": "C",
+      "total_days": 730,
+      "date_range": "2024-03-01 to 2026-02-28",
+      "exact_match_count": 728,
+      "exact_match_pct": 99.7,
+      "wu_higher_count": 0,
+      "wu_higher_pct": 0.0,
+      "wu_lower_count": 2,
+      "wu_lower_pct": 0.3,
+      "avg_diff_f": 0.02,
+      "avg_abs_diff_f": 0.02,
+      "max_abs_diff_f": 9.0,
+      "mismatch_total": 2,
+      "wu_higher_pct_of_mismatch": 0.0,
+      "wu_lower_pct_of_mismatch": 100.0,
+      "wu_never_lower": false,
+      "worst_wu_lower": [
+        {
+          "date": "2024-09-29",
+          "asos_raw": 60.8,
+          "wu_raw": 51.8,
+          "asos_rounded": 61,
+          "wu_rounded": 52,
+          "diff": 9.0
+        },
+        {
+          "date": "2025-09-28",
+          "asos_raw": 64.4,
+          "wu_raw": 59.0,
+          "asos_rounded": 64,
+          "wu_rounded": 59,
+          "diff": 5.4
+        }
+      ],
+      "worst_wu_higher": [],
+      "worst_overall": [
+        {
+          "date": "2024-09-29",
+          "asos_raw": 60.8,
+          "wu_raw": 51.8,
+          "asos_rounded": 61,
+          "wu_rounded": 52,
+          "diff": 9.0
+        },
+        {
+          "date": "2025-09-28",
+          "asos_raw": 64.4,
+          "wu_raw": 59.0,
+          "asos_rounded": 64,
+          "wu_rounded": 59,
+          "diff": 5.4
+        },
+        {
+          "date": "2024-03-01",
+          "asos_raw": 73.4,
+          "wu_raw": 73.4,
+          "asos_rounded": 73,
+          "wu_rounded": 73,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-02",
+          "asos_raw": 68.0,
+          "wu_raw": 68.0,
+          "asos_rounded": 68,
+          "wu_rounded": 68,
+          "diff": 0.0
+        },
+        {
+          "date": "2024-03-03",
+          "asos_raw": 71.6,
+          "wu_raw": 71.6,
+          "asos_rounded": 72,
+          "wu_rounded": 72,
+          "diff": 0.0
+        }
+      ]
+    }
+  },
+  "_lineage": {
+    "source": "IEM METAR daily max vs WU V1 daily max, 14 original Polymarket cities",
+    "period": "2024-03-01 to 2026-02-28 (727-730 days per city)",
+    "note": "Partial coverage: 14 cities only. 27 expansion cities verified separately in buynosafe_audit_17cities_v1.json",
+    "added_by": "Phase 02.15 data integrity sweep"
+  }
+}

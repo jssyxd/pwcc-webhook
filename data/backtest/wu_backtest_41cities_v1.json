@@ -1,0 +1,2634 @@
+{
+  "_lineage": {
+    "version": "v3.99.7",
+    "generated_at": "2026-04-19T10:09:47.661947",
+    "methodology": "WU hourly-proxy daily max as ground truth for all 41 cities. Auto unit detection. Forecast + observation converted to each city's MARKET unit (\u00b0F for 12 cities, \u00b0C for 29) before integer-rounding + equality compare. Matches Polymarket bucket resolution methodology.",
+    "prior_bug": "Pre-v3.99.2 generator forced both sides to Celsius regardless of market unit. For \u00b0F markets this produced buckets ~1.8\u00d7 wider than Polymarket resolution \u2014 inflating WR for atlanta, austin, chicago, dallas, denver, houston, los-angeles, miami, nyc, san-francisco, seattle by 7-37pp. v3.99.7 extended the fix to london after a parquet audit showed Polymarket trades London in \u00b0F 85% of the time (2253 \u00b0F vs 399 \u00b0C markets). Phase 02.22 release audit detected both via cross-check against polymarket_asos_ground_truth_v1."
+  },
+  "per_city": {
+    "amsterdam": {
+      "models": {
+        "bom": {
+          "hits": 174,
+          "attempts": 453,
+          "rate": 38.41
+        },
+        "cma": {
+          "hits": 218,
+          "attempts": 685,
+          "rate": 31.82
+        },
+        "ecmwf": {
+          "hits": 230,
+          "attempts": 729,
+          "rate": 31.55
+        },
+        "gem": {
+          "hits": 291,
+          "attempts": 729,
+          "rate": 39.92
+        },
+        "gfs": {
+          "hits": 320,
+          "attempts": 729,
+          "rate": 43.9
+        },
+        "graphcast": {
+          "hits": 246,
+          "attempts": 729,
+          "rate": 33.74
+        },
+        "icon": {
+          "hits": 417,
+          "attempts": 729,
+          "rate": 57.2
+        },
+        "jma": {
+          "hits": 165,
+          "attempts": 729,
+          "rate": 22.63
+        },
+        "knmi": {
+          "hits": 210,
+          "attempts": 729,
+          "rate": 28.81
+        },
+        "mf": {
+          "hits": 320,
+          "attempts": 729,
+          "rate": 43.9
+        },
+        "ukmo": {
+          "hits": 392,
+          "attempts": 729,
+          "rate": 53.77
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 57.2,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "ankara": {
+      "models": {
+        "bom": {
+          "hits": 134,
+          "attempts": 454,
+          "rate": 29.52
+        },
+        "cma": {
+          "hits": 67,
+          "attempts": 694,
+          "rate": 9.65
+        },
+        "ecmwf": {
+          "hits": 215,
+          "attempts": 730,
+          "rate": 29.45
+        },
+        "gem": {
+          "hits": 314,
+          "attempts": 730,
+          "rate": 43.01
+        },
+        "gfs": {
+          "hits": 152,
+          "attempts": 730,
+          "rate": 20.82
+        },
+        "graphcast": {
+          "hits": 117,
+          "attempts": 730,
+          "rate": 16.03
+        },
+        "icon": {
+          "hits": 234,
+          "attempts": 730,
+          "rate": 32.05
+        },
+        "jma": {
+          "hits": 122,
+          "attempts": 730,
+          "rate": 16.71
+        },
+        "knmi": {
+          "hits": 269,
+          "attempts": 730,
+          "rate": 36.85
+        },
+        "mf": {
+          "hits": 299,
+          "attempts": 730,
+          "rate": 40.96
+        },
+        "ukmo": {
+          "hits": 153,
+          "attempts": 730,
+          "rate": 20.96
+        }
+      },
+      "best_model": "gem",
+      "best_wr": 43.01,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "atlanta": {
+      "models": {
+        "bom": {
+          "hits": 53,
+          "attempts": 452,
+          "rate": 11.73
+        },
+        "cma": {
+          "hits": 56,
+          "attempts": 684,
+          "rate": 8.19
+        },
+        "ecmwf": {
+          "hits": 43,
+          "attempts": 728,
+          "rate": 5.91
+        },
+        "gem": {
+          "hits": 58,
+          "attempts": 728,
+          "rate": 7.97
+        },
+        "gfs": {
+          "hits": 167,
+          "attempts": 728,
+          "rate": 22.94
+        },
+        "graphcast": {
+          "hits": 41,
+          "attempts": 728,
+          "rate": 5.63
+        },
+        "icon": {
+          "hits": 70,
+          "attempts": 728,
+          "rate": 9.62
+        },
+        "jma": {
+          "hits": 43,
+          "attempts": 728,
+          "rate": 5.91
+        },
+        "knmi": {
+          "hits": 82,
+          "attempts": 728,
+          "rate": 11.26
+        },
+        "mf": {
+          "hits": 95,
+          "attempts": 728,
+          "rate": 13.05
+        },
+        "ukmo": {
+          "hits": 38,
+          "attempts": 728,
+          "rate": 5.22
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 22.94,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "austin": {
+      "models": {
+        "bom": {
+          "hits": 62,
+          "attempts": 452,
+          "rate": 13.72
+        },
+        "cma": {
+          "hits": 57,
+          "attempts": 684,
+          "rate": 8.33
+        },
+        "ecmwf": {
+          "hits": 114,
+          "attempts": 728,
+          "rate": 15.66
+        },
+        "gem": {
+          "hits": 173,
+          "attempts": 728,
+          "rate": 23.76
+        },
+        "gfs": {
+          "hits": 217,
+          "attempts": 728,
+          "rate": 29.81
+        },
+        "graphcast": {
+          "hits": 43,
+          "attempts": 728,
+          "rate": 5.91
+        },
+        "icon": {
+          "hits": 156,
+          "attempts": 728,
+          "rate": 21.43
+        },
+        "jma": {
+          "hits": 36,
+          "attempts": 728,
+          "rate": 4.95
+        },
+        "knmi": {
+          "hits": 92,
+          "attempts": 728,
+          "rate": 12.64
+        },
+        "mf": {
+          "hits": 117,
+          "attempts": 728,
+          "rate": 16.07
+        },
+        "ukmo": {
+          "hits": 98,
+          "attempts": 728,
+          "rate": 13.46
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 29.81,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "beijing": {
+      "models": {
+        "bom": {
+          "hits": 106,
+          "attempts": 454,
+          "rate": 23.35
+        },
+        "cma": {
+          "hits": 45,
+          "attempts": 686,
+          "rate": 6.56
+        },
+        "ecmwf": {
+          "hits": 130,
+          "attempts": 730,
+          "rate": 17.81
+        },
+        "gem": {
+          "hits": 188,
+          "attempts": 730,
+          "rate": 25.75
+        },
+        "gfs": {
+          "hits": 136,
+          "attempts": 730,
+          "rate": 18.63
+        },
+        "graphcast": {
+          "hits": 187,
+          "attempts": 730,
+          "rate": 25.62
+        },
+        "icon": {
+          "hits": 201,
+          "attempts": 730,
+          "rate": 27.53
+        },
+        "jma": {
+          "hits": 117,
+          "attempts": 730,
+          "rate": 16.03
+        },
+        "knmi": {
+          "hits": 144,
+          "attempts": 730,
+          "rate": 19.73
+        },
+        "mf": {
+          "hits": 183,
+          "attempts": 730,
+          "rate": 25.07
+        },
+        "ukmo": {
+          "hits": 123,
+          "attempts": 730,
+          "rate": 16.85
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 27.53,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "buenos-aires": {
+      "models": {
+        "bom": {
+          "hits": 114,
+          "attempts": 453,
+          "rate": 25.17
+        },
+        "cma": {
+          "hits": 127,
+          "attempts": 692,
+          "rate": 18.35
+        },
+        "ecmwf": {
+          "hits": 188,
+          "attempts": 730,
+          "rate": 25.75
+        },
+        "gem": {
+          "hits": 181,
+          "attempts": 730,
+          "rate": 24.79
+        },
+        "gfs": {
+          "hits": 131,
+          "attempts": 730,
+          "rate": 17.95
+        },
+        "graphcast": {
+          "hits": 140,
+          "attempts": 730,
+          "rate": 19.18
+        },
+        "icon": {
+          "hits": 199,
+          "attempts": 730,
+          "rate": 27.26
+        },
+        "jma": {
+          "hits": 129,
+          "attempts": 730,
+          "rate": 17.67
+        },
+        "knmi": {
+          "hits": 161,
+          "attempts": 730,
+          "rate": 22.05
+        },
+        "mf": {
+          "hits": 165,
+          "attempts": 730,
+          "rate": 22.6
+        },
+        "ukmo": {
+          "hits": 262,
+          "attempts": 730,
+          "rate": 35.89
+        }
+      },
+      "best_model": "ukmo",
+      "best_wr": 35.89,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "busan": {
+      "models": {
+        "bom": {
+          "hits": 160,
+          "attempts": 454,
+          "rate": 35.24
+        },
+        "cma": {
+          "hits": 215,
+          "attempts": 697,
+          "rate": 30.85
+        },
+        "ecmwf": {
+          "hits": 279,
+          "attempts": 730,
+          "rate": 38.22
+        },
+        "gem": {
+          "hits": 257,
+          "attempts": 730,
+          "rate": 35.21
+        },
+        "gfs": {
+          "hits": 274,
+          "attempts": 730,
+          "rate": 37.53
+        },
+        "graphcast": {
+          "hits": 249,
+          "attempts": 730,
+          "rate": 34.11
+        },
+        "icon": {
+          "hits": 211,
+          "attempts": 730,
+          "rate": 28.9
+        },
+        "jma": {
+          "hits": 256,
+          "attempts": 730,
+          "rate": 35.07
+        },
+        "knmi": {
+          "hits": 247,
+          "attempts": 730,
+          "rate": 33.84
+        },
+        "mf": {
+          "hits": 214,
+          "attempts": 730,
+          "rate": 29.32
+        },
+        "ukmo": {
+          "hits": 291,
+          "attempts": 730,
+          "rate": 39.86
+        }
+      },
+      "best_model": "ukmo",
+      "best_wr": 39.86,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "chengdu": {
+      "models": {
+        "bom": {
+          "hits": 75,
+          "attempts": 454,
+          "rate": 16.52
+        },
+        "cma": {
+          "hits": 113,
+          "attempts": 686,
+          "rate": 16.47
+        },
+        "ecmwf": {
+          "hits": 161,
+          "attempts": 730,
+          "rate": 22.05
+        },
+        "gem": {
+          "hits": 174,
+          "attempts": 730,
+          "rate": 23.84
+        },
+        "gfs": {
+          "hits": 142,
+          "attempts": 730,
+          "rate": 19.45
+        },
+        "graphcast": {
+          "hits": 169,
+          "attempts": 730,
+          "rate": 23.15
+        },
+        "icon": {
+          "hits": 178,
+          "attempts": 730,
+          "rate": 24.38
+        },
+        "jma": {
+          "hits": 131,
+          "attempts": 730,
+          "rate": 17.95
+        },
+        "knmi": {
+          "hits": 165,
+          "attempts": 730,
+          "rate": 22.6
+        },
+        "mf": {
+          "hits": 171,
+          "attempts": 730,
+          "rate": 23.42
+        },
+        "ukmo": {
+          "hits": 174,
+          "attempts": 730,
+          "rate": 23.84
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 24.38,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "chicago": {
+      "models": {
+        "bom": {
+          "hits": 101,
+          "attempts": 452,
+          "rate": 22.35
+        },
+        "cma": {
+          "hits": 70,
+          "attempts": 684,
+          "rate": 10.23
+        },
+        "ecmwf": {
+          "hits": 121,
+          "attempts": 728,
+          "rate": 16.62
+        },
+        "gem": {
+          "hits": 97,
+          "attempts": 728,
+          "rate": 13.32
+        },
+        "gfs": {
+          "hits": 277,
+          "attempts": 728,
+          "rate": 38.05
+        },
+        "graphcast": {
+          "hits": 93,
+          "attempts": 728,
+          "rate": 12.77
+        },
+        "icon": {
+          "hits": 156,
+          "attempts": 728,
+          "rate": 21.43
+        },
+        "jma": {
+          "hits": 65,
+          "attempts": 728,
+          "rate": 8.93
+        },
+        "knmi": {
+          "hits": 108,
+          "attempts": 728,
+          "rate": 14.84
+        },
+        "mf": {
+          "hits": 143,
+          "attempts": 728,
+          "rate": 19.64
+        },
+        "ukmo": {
+          "hits": 127,
+          "attempts": 728,
+          "rate": 17.45
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 38.05,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "chongqing": {
+      "models": {
+        "bom": {
+          "hits": 88,
+          "attempts": 454,
+          "rate": 19.38
+        },
+        "cma": {
+          "hits": 146,
+          "attempts": 686,
+          "rate": 21.28
+        },
+        "ecmwf": {
+          "hits": 198,
+          "attempts": 730,
+          "rate": 27.12
+        },
+        "gem": {
+          "hits": 178,
+          "attempts": 730,
+          "rate": 24.38
+        },
+        "gfs": {
+          "hits": 124,
+          "attempts": 730,
+          "rate": 16.99
+        },
+        "graphcast": {
+          "hits": 143,
+          "attempts": 730,
+          "rate": 19.59
+        },
+        "icon": {
+          "hits": 176,
+          "attempts": 730,
+          "rate": 24.11
+        },
+        "jma": {
+          "hits": 138,
+          "attempts": 730,
+          "rate": 18.9
+        },
+        "knmi": {
+          "hits": 183,
+          "attempts": 730,
+          "rate": 25.07
+        },
+        "mf": {
+          "hits": 173,
+          "attempts": 730,
+          "rate": 23.7
+        },
+        "ukmo": {
+          "hits": 156,
+          "attempts": 730,
+          "rate": 21.37
+        }
+      },
+      "best_model": "ecmwf",
+      "best_wr": 27.12,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "dallas": {
+      "models": {
+        "bom": {
+          "hits": 91,
+          "attempts": 452,
+          "rate": 20.13
+        },
+        "cma": {
+          "hits": 78,
+          "attempts": 684,
+          "rate": 11.4
+        },
+        "ecmwf": {
+          "hits": 129,
+          "attempts": 728,
+          "rate": 17.72
+        },
+        "gem": {
+          "hits": 170,
+          "attempts": 728,
+          "rate": 23.35
+        },
+        "gfs": {
+          "hits": 178,
+          "attempts": 728,
+          "rate": 24.45
+        },
+        "graphcast": {
+          "hits": 82,
+          "attempts": 728,
+          "rate": 11.26
+        },
+        "icon": {
+          "hits": 162,
+          "attempts": 728,
+          "rate": 22.25
+        },
+        "jma": {
+          "hits": 55,
+          "attempts": 728,
+          "rate": 7.55
+        },
+        "knmi": {
+          "hits": 98,
+          "attempts": 728,
+          "rate": 13.46
+        },
+        "mf": {
+          "hits": 69,
+          "attempts": 728,
+          "rate": 9.48
+        },
+        "ukmo": {
+          "hits": 139,
+          "attempts": 728,
+          "rate": 19.09
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 24.45,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "denver": {
+      "models": {
+        "bom": {
+          "hits": 40,
+          "attempts": 452,
+          "rate": 8.85
+        },
+        "cma": {
+          "hits": 43,
+          "attempts": 679,
+          "rate": 6.33
+        },
+        "ecmwf": {
+          "hits": 103,
+          "attempts": 723,
+          "rate": 14.25
+        },
+        "gem": {
+          "hits": 132,
+          "attempts": 723,
+          "rate": 18.26
+        },
+        "gfs": {
+          "hits": 167,
+          "attempts": 723,
+          "rate": 23.1
+        },
+        "graphcast": {
+          "hits": 35,
+          "attempts": 723,
+          "rate": 4.84
+        },
+        "icon": {
+          "hits": 129,
+          "attempts": 723,
+          "rate": 17.84
+        },
+        "jma": {
+          "hits": 29,
+          "attempts": 723,
+          "rate": 4.01
+        },
+        "knmi": {
+          "hits": 75,
+          "attempts": 723,
+          "rate": 10.37
+        },
+        "mf": {
+          "hits": 101,
+          "attempts": 723,
+          "rate": 13.97
+        },
+        "ukmo": {
+          "hits": 71,
+          "attempts": 723,
+          "rate": 9.82
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 23.1,
+      "wu_days": 724,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "helsinki": {
+      "models": {
+        "bom": {
+          "hits": 105,
+          "attempts": 453,
+          "rate": 23.18
+        },
+        "cma": {
+          "hits": 122,
+          "attempts": 693,
+          "rate": 17.6
+        },
+        "ecmwf": {
+          "hits": 220,
+          "attempts": 729,
+          "rate": 30.18
+        },
+        "gem": {
+          "hits": 219,
+          "attempts": 729,
+          "rate": 30.04
+        },
+        "gfs": {
+          "hits": 250,
+          "attempts": 729,
+          "rate": 34.29
+        },
+        "graphcast": {
+          "hits": 193,
+          "attempts": 729,
+          "rate": 26.47
+        },
+        "icon": {
+          "hits": 322,
+          "attempts": 729,
+          "rate": 44.17
+        },
+        "jma": {
+          "hits": 229,
+          "attempts": 729,
+          "rate": 31.41
+        },
+        "knmi": {
+          "hits": 340,
+          "attempts": 729,
+          "rate": 46.64
+        },
+        "mf": {
+          "hits": 252,
+          "attempts": 729,
+          "rate": 34.57
+        },
+        "ukmo": {
+          "hits": 244,
+          "attempts": 729,
+          "rate": 33.47
+        }
+      },
+      "best_model": "knmi",
+      "best_wr": 46.64,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "hong-kong": {
+      "models": {
+        "bom": {
+          "hits": 122,
+          "attempts": 448,
+          "rate": 27.23
+        },
+        "cma": {
+          "hits": 178,
+          "attempts": 680,
+          "rate": 26.18
+        },
+        "ecmwf": {
+          "hits": 159,
+          "attempts": 724,
+          "rate": 21.96
+        },
+        "gem": {
+          "hits": 226,
+          "attempts": 724,
+          "rate": 31.22
+        },
+        "gfs": {
+          "hits": 80,
+          "attempts": 724,
+          "rate": 11.05
+        },
+        "graphcast": {
+          "hits": 232,
+          "attempts": 724,
+          "rate": 32.04
+        },
+        "icon": {
+          "hits": 185,
+          "attempts": 724,
+          "rate": 25.55
+        },
+        "jma": {
+          "hits": 171,
+          "attempts": 724,
+          "rate": 23.62
+        },
+        "knmi": {
+          "hits": 103,
+          "attempts": 724,
+          "rate": 14.23
+        },
+        "mf": {
+          "hits": 143,
+          "attempts": 724,
+          "rate": 19.75
+        },
+        "ukmo": {
+          "hits": 221,
+          "attempts": 724,
+          "rate": 30.52
+        }
+      },
+      "best_model": "graphcast",
+      "best_wr": 32.04,
+      "wu_days": 724,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "houston": {
+      "models": {
+        "bom": {
+          "hits": 68,
+          "attempts": 452,
+          "rate": 15.04
+        },
+        "cma": {
+          "hits": 99,
+          "attempts": 684,
+          "rate": 14.47
+        },
+        "ecmwf": {
+          "hits": 69,
+          "attempts": 728,
+          "rate": 9.48
+        },
+        "gem": {
+          "hits": 135,
+          "attempts": 728,
+          "rate": 18.54
+        },
+        "gfs": {
+          "hits": 235,
+          "attempts": 728,
+          "rate": 32.28
+        },
+        "graphcast": {
+          "hits": 78,
+          "attempts": 728,
+          "rate": 10.71
+        },
+        "icon": {
+          "hits": 189,
+          "attempts": 728,
+          "rate": 25.96
+        },
+        "jma": {
+          "hits": 27,
+          "attempts": 728,
+          "rate": 3.71
+        },
+        "knmi": {
+          "hits": 72,
+          "attempts": 728,
+          "rate": 9.89
+        },
+        "mf": {
+          "hits": 69,
+          "attempts": 728,
+          "rate": 9.48
+        },
+        "ukmo": {
+          "hits": 128,
+          "attempts": 728,
+          "rate": 17.58
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 32.28,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "jakarta": {
+      "models": {
+        "bom": {
+          "hits": 90,
+          "attempts": 452,
+          "rate": 19.91
+        },
+        "cma": {
+          "hits": 217,
+          "attempts": 684,
+          "rate": 31.73
+        },
+        "ecmwf": {
+          "hits": 117,
+          "attempts": 728,
+          "rate": 16.07
+        },
+        "gem": {
+          "hits": 198,
+          "attempts": 728,
+          "rate": 27.2
+        },
+        "gfs": {
+          "hits": 239,
+          "attempts": 728,
+          "rate": 32.83
+        },
+        "graphcast": {
+          "hits": 157,
+          "attempts": 728,
+          "rate": 21.57
+        },
+        "icon": {
+          "hits": 308,
+          "attempts": 728,
+          "rate": 42.31
+        },
+        "jma": {
+          "hits": 135,
+          "attempts": 728,
+          "rate": 18.54
+        },
+        "knmi": {
+          "hits": 130,
+          "attempts": 728,
+          "rate": 17.86
+        },
+        "mf": {
+          "hits": 167,
+          "attempts": 728,
+          "rate": 22.94
+        },
+        "ukmo": {
+          "hits": 226,
+          "attempts": 728,
+          "rate": 31.04
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 42.31,
+      "wu_days": 729,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "kuala-lumpur": {
+      "models": {
+        "bom": {
+          "hits": 57,
+          "attempts": 454,
+          "rate": 12.56
+        },
+        "cma": {
+          "hits": 205,
+          "attempts": 686,
+          "rate": 29.88
+        },
+        "ecmwf": {
+          "hits": 164,
+          "attempts": 730,
+          "rate": 22.47
+        },
+        "gem": {
+          "hits": 145,
+          "attempts": 730,
+          "rate": 19.86
+        },
+        "gfs": {
+          "hits": 113,
+          "attempts": 730,
+          "rate": 15.48
+        },
+        "graphcast": {
+          "hits": 79,
+          "attempts": 730,
+          "rate": 10.82
+        },
+        "icon": {
+          "hits": 220,
+          "attempts": 730,
+          "rate": 30.14
+        },
+        "jma": {
+          "hits": 13,
+          "attempts": 730,
+          "rate": 1.78
+        },
+        "knmi": {
+          "hits": 159,
+          "attempts": 730,
+          "rate": 21.78
+        },
+        "mf": {
+          "hits": 132,
+          "attempts": 730,
+          "rate": 18.08
+        },
+        "ukmo": {
+          "hits": 185,
+          "attempts": 730,
+          "rate": 25.34
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 30.14,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "london": {
+      "models": {
+        "bom": {
+          "hits": 109,
+          "attempts": 453,
+          "rate": 24.06
+        },
+        "cma": {
+          "hits": 72,
+          "attempts": 685,
+          "rate": 10.51
+        },
+        "ecmwf": {
+          "hits": 179,
+          "attempts": 729,
+          "rate": 24.55
+        },
+        "gem": {
+          "hits": 184,
+          "attempts": 729,
+          "rate": 25.24
+        },
+        "gfs": {
+          "hits": 188,
+          "attempts": 729,
+          "rate": 25.79
+        },
+        "graphcast": {
+          "hits": 118,
+          "attempts": 729,
+          "rate": 16.19
+        },
+        "icon": {
+          "hits": 203,
+          "attempts": 729,
+          "rate": 27.85
+        },
+        "jma": {
+          "hits": 106,
+          "attempts": 729,
+          "rate": 14.54
+        },
+        "knmi": {
+          "hits": 175,
+          "attempts": 729,
+          "rate": 24.01
+        },
+        "mf": {
+          "hits": 177,
+          "attempts": 729,
+          "rate": 24.28
+        },
+        "ukmo": {
+          "hits": 198,
+          "attempts": 729,
+          "rate": 27.16
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 27.85,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "F"
+    },
+    "los-angeles": {
+      "models": {
+        "bom": {
+          "hits": 41,
+          "attempts": 452,
+          "rate": 9.07
+        },
+        "cma": {
+          "hits": 90,
+          "attempts": 694,
+          "rate": 12.97
+        },
+        "ecmwf": {
+          "hits": 31,
+          "attempts": 728,
+          "rate": 4.26
+        },
+        "gem": {
+          "hits": 79,
+          "attempts": 728,
+          "rate": 10.85
+        },
+        "gfs": {
+          "hits": 272,
+          "attempts": 728,
+          "rate": 37.36
+        },
+        "graphcast": {
+          "hits": 70,
+          "attempts": 728,
+          "rate": 9.62
+        },
+        "icon": {
+          "hits": 109,
+          "attempts": 728,
+          "rate": 14.97
+        },
+        "jma": {
+          "hits": 66,
+          "attempts": 728,
+          "rate": 9.07
+        },
+        "knmi": {
+          "hits": 131,
+          "attempts": 728,
+          "rate": 17.99
+        },
+        "mf": {
+          "hits": 56,
+          "attempts": 728,
+          "rate": 7.69
+        },
+        "ukmo": {
+          "hits": 153,
+          "attempts": 728,
+          "rate": 21.02
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 37.36,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "lucknow": {
+      "models": {
+        "bom": {
+          "hits": 98,
+          "attempts": 401,
+          "rate": 24.44
+        },
+        "cma": {
+          "hits": 106,
+          "attempts": 641,
+          "rate": 16.54
+        },
+        "ecmwf": {
+          "hits": 264,
+          "attempts": 677,
+          "rate": 39.0
+        },
+        "gem": {
+          "hits": 157,
+          "attempts": 677,
+          "rate": 23.19
+        },
+        "gfs": {
+          "hits": 93,
+          "attempts": 677,
+          "rate": 13.74
+        },
+        "graphcast": {
+          "hits": 174,
+          "attempts": 677,
+          "rate": 25.7
+        },
+        "icon": {
+          "hits": 231,
+          "attempts": 677,
+          "rate": 34.12
+        },
+        "jma": {
+          "hits": 111,
+          "attempts": 677,
+          "rate": 16.4
+        },
+        "knmi": {
+          "hits": 215,
+          "attempts": 677,
+          "rate": 31.76
+        },
+        "mf": {
+          "hits": 198,
+          "attempts": 677,
+          "rate": 29.25
+        },
+        "ukmo": {
+          "hits": 240,
+          "attempts": 677,
+          "rate": 35.45
+        }
+      },
+      "best_model": "ecmwf",
+      "best_wr": 39.0,
+      "wu_days": 678,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "madrid": {
+      "models": {
+        "bom": {
+          "hits": 84,
+          "attempts": 453,
+          "rate": 18.54
+        },
+        "cma": {
+          "hits": 82,
+          "attempts": 685,
+          "rate": 11.97
+        },
+        "ecmwf": {
+          "hits": 245,
+          "attempts": 729,
+          "rate": 33.61
+        },
+        "gem": {
+          "hits": 180,
+          "attempts": 729,
+          "rate": 24.69
+        },
+        "gfs": {
+          "hits": 195,
+          "attempts": 729,
+          "rate": 26.75
+        },
+        "graphcast": {
+          "hits": 84,
+          "attempts": 729,
+          "rate": 11.52
+        },
+        "icon": {
+          "hits": 304,
+          "attempts": 729,
+          "rate": 41.7
+        },
+        "jma": {
+          "hits": 128,
+          "attempts": 729,
+          "rate": 17.56
+        },
+        "knmi": {
+          "hits": 268,
+          "attempts": 729,
+          "rate": 36.76
+        },
+        "mf": {
+          "hits": 310,
+          "attempts": 729,
+          "rate": 42.52
+        },
+        "ukmo": {
+          "hits": 165,
+          "attempts": 729,
+          "rate": 22.63
+        }
+      },
+      "best_model": "mf",
+      "best_wr": 42.52,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "mexico-city": {
+      "models": {
+        "bom": {
+          "hits": 166,
+          "attempts": 453,
+          "rate": 36.64
+        },
+        "cma": {
+          "hits": 58,
+          "attempts": 686,
+          "rate": 8.45
+        },
+        "ecmwf": {
+          "hits": 248,
+          "attempts": 730,
+          "rate": 33.97
+        },
+        "gem": {
+          "hits": 242,
+          "attempts": 730,
+          "rate": 33.15
+        },
+        "gfs": {
+          "hits": 250,
+          "attempts": 730,
+          "rate": 34.25
+        },
+        "graphcast": {
+          "hits": 112,
+          "attempts": 730,
+          "rate": 15.34
+        },
+        "icon": {
+          "hits": 263,
+          "attempts": 730,
+          "rate": 36.03
+        },
+        "jma": {
+          "hits": 118,
+          "attempts": 730,
+          "rate": 16.16
+        },
+        "knmi": {
+          "hits": 236,
+          "attempts": 730,
+          "rate": 32.33
+        },
+        "mf": {
+          "hits": 171,
+          "attempts": 730,
+          "rate": 23.42
+        },
+        "ukmo": {
+          "hits": 276,
+          "attempts": 730,
+          "rate": 37.81
+        }
+      },
+      "best_model": "ukmo",
+      "best_wr": 37.81,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "miami": {
+      "models": {
+        "bom": {
+          "hits": 24,
+          "attempts": 452,
+          "rate": 5.31
+        },
+        "cma": {
+          "hits": 42,
+          "attempts": 684,
+          "rate": 6.14
+        },
+        "ecmwf": {
+          "hits": 71,
+          "attempts": 728,
+          "rate": 9.75
+        },
+        "gem": {
+          "hits": 157,
+          "attempts": 728,
+          "rate": 21.57
+        },
+        "gfs": {
+          "hits": 257,
+          "attempts": 728,
+          "rate": 35.3
+        },
+        "graphcast": {
+          "hits": 148,
+          "attempts": 728,
+          "rate": 20.33
+        },
+        "icon": {
+          "hits": 173,
+          "attempts": 728,
+          "rate": 23.76
+        },
+        "jma": {
+          "hits": 108,
+          "attempts": 728,
+          "rate": 14.84
+        },
+        "knmi": {
+          "hits": 120,
+          "attempts": 728,
+          "rate": 16.48
+        },
+        "mf": {
+          "hits": 153,
+          "attempts": 728,
+          "rate": 21.02
+        },
+        "ukmo": {
+          "hits": 141,
+          "attempts": 728,
+          "rate": 19.37
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 35.3,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "milan": {
+      "models": {
+        "bom": {
+          "hits": 54,
+          "attempts": 453,
+          "rate": 11.92
+        },
+        "cma": {
+          "hits": 42,
+          "attempts": 685,
+          "rate": 6.13
+        },
+        "ecmwf": {
+          "hits": 146,
+          "attempts": 729,
+          "rate": 20.03
+        },
+        "gem": {
+          "hits": 179,
+          "attempts": 729,
+          "rate": 24.55
+        },
+        "gfs": {
+          "hits": 162,
+          "attempts": 729,
+          "rate": 22.22
+        },
+        "graphcast": {
+          "hits": 115,
+          "attempts": 729,
+          "rate": 15.78
+        },
+        "icon": {
+          "hits": 319,
+          "attempts": 729,
+          "rate": 43.76
+        },
+        "jma": {
+          "hits": 105,
+          "attempts": 729,
+          "rate": 14.4
+        },
+        "knmi": {
+          "hits": 247,
+          "attempts": 729,
+          "rate": 33.88
+        },
+        "mf": {
+          "hits": 255,
+          "attempts": 729,
+          "rate": 34.98
+        },
+        "ukmo": {
+          "hits": 232,
+          "attempts": 729,
+          "rate": 31.82
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 43.76,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "munich": {
+      "models": {
+        "bom": {
+          "hits": 85,
+          "attempts": 453,
+          "rate": 18.76
+        },
+        "cma": {
+          "hits": 116,
+          "attempts": 685,
+          "rate": 16.93
+        },
+        "ecmwf": {
+          "hits": 203,
+          "attempts": 729,
+          "rate": 27.85
+        },
+        "gem": {
+          "hits": 233,
+          "attempts": 729,
+          "rate": 31.96
+        },
+        "gfs": {
+          "hits": 121,
+          "attempts": 729,
+          "rate": 16.6
+        },
+        "graphcast": {
+          "hits": 121,
+          "attempts": 729,
+          "rate": 16.6
+        },
+        "icon": {
+          "hits": 356,
+          "attempts": 729,
+          "rate": 48.83
+        },
+        "jma": {
+          "hits": 125,
+          "attempts": 729,
+          "rate": 17.15
+        },
+        "knmi": {
+          "hits": 240,
+          "attempts": 729,
+          "rate": 32.92
+        },
+        "mf": {
+          "hits": 258,
+          "attempts": 729,
+          "rate": 35.39
+        },
+        "ukmo": {
+          "hits": 166,
+          "attempts": 729,
+          "rate": 22.77
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 48.83,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "nyc": {
+      "models": {
+        "bom": {
+          "hits": 100,
+          "attempts": 452,
+          "rate": 22.12
+        },
+        "cma": {
+          "hits": 57,
+          "attempts": 684,
+          "rate": 8.33
+        },
+        "ecmwf": {
+          "hits": 144,
+          "attempts": 728,
+          "rate": 19.78
+        },
+        "gem": {
+          "hits": 180,
+          "attempts": 728,
+          "rate": 24.73
+        },
+        "gfs": {
+          "hits": 184,
+          "attempts": 728,
+          "rate": 25.27
+        },
+        "graphcast": {
+          "hits": 136,
+          "attempts": 728,
+          "rate": 18.68
+        },
+        "icon": {
+          "hits": 198,
+          "attempts": 728,
+          "rate": 27.2
+        },
+        "jma": {
+          "hits": 85,
+          "attempts": 728,
+          "rate": 11.68
+        },
+        "knmi": {
+          "hits": 114,
+          "attempts": 728,
+          "rate": 15.66
+        },
+        "mf": {
+          "hits": 122,
+          "attempts": 728,
+          "rate": 16.76
+        },
+        "ukmo": {
+          "hits": 146,
+          "attempts": 728,
+          "rate": 20.05
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 27.2,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "panama-city": {
+      "models": {
+        "bom": {
+          "hits": 139,
+          "attempts": 453,
+          "rate": 30.68
+        },
+        "cma": {
+          "hits": 245,
+          "attempts": 679,
+          "rate": 36.08
+        },
+        "ecmwf": {
+          "hits": 98,
+          "attempts": 723,
+          "rate": 13.55
+        },
+        "gem": {
+          "hits": 143,
+          "attempts": 723,
+          "rate": 19.78
+        },
+        "gfs": {
+          "hits": 207,
+          "attempts": 723,
+          "rate": 28.63
+        },
+        "graphcast": {
+          "hits": 204,
+          "attempts": 723,
+          "rate": 28.22
+        },
+        "icon": {
+          "hits": 257,
+          "attempts": 723,
+          "rate": 35.55
+        },
+        "jma": {
+          "hits": 43,
+          "attempts": 723,
+          "rate": 5.95
+        },
+        "knmi": {
+          "hits": 146,
+          "attempts": 723,
+          "rate": 20.19
+        },
+        "mf": {
+          "hits": 144,
+          "attempts": 723,
+          "rate": 19.92
+        },
+        "ukmo": {
+          "hits": 200,
+          "attempts": 723,
+          "rate": 27.66
+        }
+      },
+      "best_model": "cma",
+      "best_wr": 36.08,
+      "wu_days": 724,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "paris": {
+      "models": {
+        "bom": {
+          "hits": 223,
+          "attempts": 453,
+          "rate": 49.23
+        },
+        "cma": {
+          "hits": 121,
+          "attempts": 685,
+          "rate": 17.66
+        },
+        "ecmwf": {
+          "hits": 180,
+          "attempts": 729,
+          "rate": 24.69
+        },
+        "gem": {
+          "hits": 289,
+          "attempts": 729,
+          "rate": 39.64
+        },
+        "gfs": {
+          "hits": 233,
+          "attempts": 729,
+          "rate": 31.96
+        },
+        "graphcast": {
+          "hits": 179,
+          "attempts": 729,
+          "rate": 24.55
+        },
+        "icon": {
+          "hits": 453,
+          "attempts": 729,
+          "rate": 62.14
+        },
+        "jma": {
+          "hits": 139,
+          "attempts": 729,
+          "rate": 19.07
+        },
+        "knmi": {
+          "hits": 254,
+          "attempts": 729,
+          "rate": 34.84
+        },
+        "mf": {
+          "hits": 444,
+          "attempts": 729,
+          "rate": 60.91
+        },
+        "ukmo": {
+          "hits": 383,
+          "attempts": 729,
+          "rate": 52.54
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 62.14,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "san-francisco": {
+      "models": {
+        "bom": {
+          "hits": 59,
+          "attempts": 452,
+          "rate": 13.05
+        },
+        "cma": {
+          "hits": 102,
+          "attempts": 694,
+          "rate": 14.7
+        },
+        "ecmwf": {
+          "hits": 100,
+          "attempts": 728,
+          "rate": 13.74
+        },
+        "gem": {
+          "hits": 41,
+          "attempts": 728,
+          "rate": 5.63
+        },
+        "gfs": {
+          "hits": 135,
+          "attempts": 728,
+          "rate": 18.54
+        },
+        "graphcast": {
+          "hits": 85,
+          "attempts": 728,
+          "rate": 11.68
+        },
+        "icon": {
+          "hits": 76,
+          "attempts": 728,
+          "rate": 10.44
+        },
+        "jma": {
+          "hits": 17,
+          "attempts": 728,
+          "rate": 2.34
+        },
+        "knmi": {
+          "hits": 110,
+          "attempts": 728,
+          "rate": 15.11
+        },
+        "mf": {
+          "hits": 94,
+          "attempts": 728,
+          "rate": 12.91
+        },
+        "ukmo": {
+          "hits": 103,
+          "attempts": 728,
+          "rate": 14.15
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 18.54,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "sao-paulo": {
+      "models": {
+        "bom": {
+          "hits": 72,
+          "attempts": 453,
+          "rate": 15.89
+        },
+        "cma": {
+          "hits": 93,
+          "attempts": 692,
+          "rate": 13.44
+        },
+        "ecmwf": {
+          "hits": 212,
+          "attempts": 730,
+          "rate": 29.04
+        },
+        "gem": {
+          "hits": 178,
+          "attempts": 730,
+          "rate": 24.38
+        },
+        "gfs": {
+          "hits": 224,
+          "attempts": 730,
+          "rate": 30.68
+        },
+        "graphcast": {
+          "hits": 89,
+          "attempts": 730,
+          "rate": 12.19
+        },
+        "icon": {
+          "hits": 215,
+          "attempts": 730,
+          "rate": 29.45
+        },
+        "jma": {
+          "hits": 40,
+          "attempts": 730,
+          "rate": 5.48
+        },
+        "knmi": {
+          "hits": 157,
+          "attempts": 730,
+          "rate": 21.51
+        },
+        "mf": {
+          "hits": 180,
+          "attempts": 730,
+          "rate": 24.66
+        },
+        "ukmo": {
+          "hits": 117,
+          "attempts": 730,
+          "rate": 16.03
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 30.68,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "seattle": {
+      "models": {
+        "bom": {
+          "hits": 47,
+          "attempts": 452,
+          "rate": 10.4
+        },
+        "cma": {
+          "hits": 45,
+          "attempts": 694,
+          "rate": 6.48
+        },
+        "ecmwf": {
+          "hits": 106,
+          "attempts": 728,
+          "rate": 14.56
+        },
+        "gem": {
+          "hits": 138,
+          "attempts": 728,
+          "rate": 18.96
+        },
+        "gfs": {
+          "hits": 213,
+          "attempts": 728,
+          "rate": 29.26
+        },
+        "graphcast": {
+          "hits": 96,
+          "attempts": 728,
+          "rate": 13.19
+        },
+        "icon": {
+          "hits": 140,
+          "attempts": 728,
+          "rate": 19.23
+        },
+        "jma": {
+          "hits": 84,
+          "attempts": 728,
+          "rate": 11.54
+        },
+        "knmi": {
+          "hits": 136,
+          "attempts": 728,
+          "rate": 18.68
+        },
+        "mf": {
+          "hits": 106,
+          "attempts": 728,
+          "rate": 14.56
+        },
+        "ukmo": {
+          "hits": 140,
+          "attempts": 728,
+          "rate": 19.23
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 29.26,
+      "wu_days": 729,
+      "wu_unit": "F",
+      "market_unit": "F"
+    },
+    "seoul": {
+      "models": {
+        "bom": {
+          "hits": 155,
+          "attempts": 454,
+          "rate": 34.14
+        },
+        "cma": {
+          "hits": 71,
+          "attempts": 697,
+          "rate": 10.19
+        },
+        "ecmwf": {
+          "hits": 165,
+          "attempts": 730,
+          "rate": 22.6
+        },
+        "gem": {
+          "hits": 222,
+          "attempts": 730,
+          "rate": 30.41
+        },
+        "gfs": {
+          "hits": 69,
+          "attempts": 730,
+          "rate": 9.45
+        },
+        "graphcast": {
+          "hits": 64,
+          "attempts": 730,
+          "rate": 8.77
+        },
+        "icon": {
+          "hits": 228,
+          "attempts": 730,
+          "rate": 31.23
+        },
+        "jma": {
+          "hits": 90,
+          "attempts": 730,
+          "rate": 12.33
+        },
+        "knmi": {
+          "hits": 254,
+          "attempts": 730,
+          "rate": 34.79
+        },
+        "mf": {
+          "hits": 102,
+          "attempts": 730,
+          "rate": 13.97
+        },
+        "ukmo": {
+          "hits": 102,
+          "attempts": 730,
+          "rate": 13.97
+        }
+      },
+      "best_model": "knmi",
+      "best_wr": 34.79,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "shanghai": {
+      "models": {
+        "bom": {
+          "hits": 103,
+          "attempts": 454,
+          "rate": 22.69
+        },
+        "cma": {
+          "hits": 111,
+          "attempts": 686,
+          "rate": 16.18
+        },
+        "ecmwf": {
+          "hits": 132,
+          "attempts": 730,
+          "rate": 18.08
+        },
+        "gem": {
+          "hits": 161,
+          "attempts": 730,
+          "rate": 22.05
+        },
+        "gfs": {
+          "hits": 168,
+          "attempts": 730,
+          "rate": 23.01
+        },
+        "graphcast": {
+          "hits": 156,
+          "attempts": 730,
+          "rate": 21.37
+        },
+        "icon": {
+          "hits": 105,
+          "attempts": 730,
+          "rate": 14.38
+        },
+        "jma": {
+          "hits": 72,
+          "attempts": 730,
+          "rate": 9.86
+        },
+        "knmi": {
+          "hits": 239,
+          "attempts": 730,
+          "rate": 32.74
+        },
+        "mf": {
+          "hits": 34,
+          "attempts": 730,
+          "rate": 4.66
+        },
+        "ukmo": {
+          "hits": 187,
+          "attempts": 730,
+          "rate": 25.62
+        }
+      },
+      "best_model": "knmi",
+      "best_wr": 32.74,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "shenzhen": {
+      "models": {
+        "bom": {
+          "hits": 34,
+          "attempts": 257,
+          "rate": 13.23
+        },
+        "cma": {
+          "hits": 93,
+          "attempts": 485,
+          "rate": 19.18
+        },
+        "ecmwf": {
+          "hits": 120,
+          "attempts": 529,
+          "rate": 22.68
+        },
+        "gem": {
+          "hits": 125,
+          "attempts": 529,
+          "rate": 23.63
+        },
+        "gfs": {
+          "hits": 87,
+          "attempts": 529,
+          "rate": 16.45
+        },
+        "graphcast": {
+          "hits": 136,
+          "attempts": 529,
+          "rate": 25.71
+        },
+        "icon": {
+          "hits": 95,
+          "attempts": 529,
+          "rate": 17.96
+        },
+        "jma": {
+          "hits": 102,
+          "attempts": 529,
+          "rate": 19.28
+        },
+        "knmi": {
+          "hits": 147,
+          "attempts": 529,
+          "rate": 27.79
+        },
+        "mf": {
+          "hits": 144,
+          "attempts": 529,
+          "rate": 27.22
+        },
+        "ukmo": {
+          "hits": 148,
+          "attempts": 529,
+          "rate": 27.98
+        }
+      },
+      "best_model": "ukmo",
+      "best_wr": 27.98,
+      "wu_days": 530,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "singapore": {
+      "models": {
+        "bom": {
+          "hits": 117,
+          "attempts": 454,
+          "rate": 25.77
+        },
+        "cma": {
+          "hits": 216,
+          "attempts": 686,
+          "rate": 31.49
+        },
+        "ecmwf": {
+          "hits": 128,
+          "attempts": 730,
+          "rate": 17.53
+        },
+        "gem": {
+          "hits": 181,
+          "attempts": 730,
+          "rate": 24.79
+        },
+        "gfs": {
+          "hits": 249,
+          "attempts": 730,
+          "rate": 34.11
+        },
+        "graphcast": {
+          "hits": 133,
+          "attempts": 730,
+          "rate": 18.22
+        },
+        "icon": {
+          "hits": 349,
+          "attempts": 730,
+          "rate": 47.81
+        },
+        "jma": {
+          "hits": 33,
+          "attempts": 730,
+          "rate": 4.52
+        },
+        "knmi": {
+          "hits": 189,
+          "attempts": 730,
+          "rate": 25.89
+        },
+        "mf": {
+          "hits": 64,
+          "attempts": 730,
+          "rate": 8.77
+        },
+        "ukmo": {
+          "hits": 288,
+          "attempts": 730,
+          "rate": 39.45
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 47.81,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "taipei": {
+      "models": {
+        "bom": {
+          "hits": 50,
+          "attempts": 453,
+          "rate": 11.04
+        },
+        "cma": {
+          "hits": 78,
+          "attempts": 685,
+          "rate": 11.39
+        },
+        "ecmwf": {
+          "hits": 178,
+          "attempts": 729,
+          "rate": 24.42
+        },
+        "gem": {
+          "hits": 68,
+          "attempts": 729,
+          "rate": 9.33
+        },
+        "gfs": {
+          "hits": 189,
+          "attempts": 729,
+          "rate": 25.93
+        },
+        "graphcast": {
+          "hits": 85,
+          "attempts": 729,
+          "rate": 11.66
+        },
+        "icon": {
+          "hits": 155,
+          "attempts": 729,
+          "rate": 21.26
+        },
+        "jma": {
+          "hits": 64,
+          "attempts": 729,
+          "rate": 8.78
+        },
+        "knmi": {
+          "hits": 141,
+          "attempts": 729,
+          "rate": 19.34
+        },
+        "mf": {
+          "hits": 204,
+          "attempts": 729,
+          "rate": 27.98
+        },
+        "ukmo": {
+          "hits": 130,
+          "attempts": 729,
+          "rate": 17.83
+        }
+      },
+      "best_model": "mf",
+      "best_wr": 27.98,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "tokyo": {
+      "models": {
+        "bom": {
+          "hits": 140,
+          "attempts": 454,
+          "rate": 30.84
+        },
+        "cma": {
+          "hits": 158,
+          "attempts": 697,
+          "rate": 22.67
+        },
+        "ecmwf": {
+          "hits": 218,
+          "attempts": 730,
+          "rate": 29.86
+        },
+        "gem": {
+          "hits": 207,
+          "attempts": 730,
+          "rate": 28.36
+        },
+        "gfs": {
+          "hits": 287,
+          "attempts": 730,
+          "rate": 39.32
+        },
+        "graphcast": {
+          "hits": 240,
+          "attempts": 730,
+          "rate": 32.88
+        },
+        "icon": {
+          "hits": 268,
+          "attempts": 730,
+          "rate": 36.71
+        },
+        "jma": {
+          "hits": 190,
+          "attempts": 730,
+          "rate": 26.03
+        },
+        "knmi": {
+          "hits": 213,
+          "attempts": 730,
+          "rate": 29.18
+        },
+        "mf": {
+          "hits": 129,
+          "attempts": 730,
+          "rate": 17.67
+        },
+        "ukmo": {
+          "hits": 222,
+          "attempts": 730,
+          "rate": 30.41
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 39.32,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "toronto": {
+      "models": {
+        "bom": {
+          "hits": 140,
+          "attempts": 448,
+          "rate": 31.25
+        },
+        "cma": {
+          "hits": 183,
+          "attempts": 680,
+          "rate": 26.91
+        },
+        "ecmwf": {
+          "hits": 249,
+          "attempts": 724,
+          "rate": 34.39
+        },
+        "gem": {
+          "hits": 239,
+          "attempts": 724,
+          "rate": 33.01
+        },
+        "gfs": {
+          "hits": 393,
+          "attempts": 724,
+          "rate": 54.28
+        },
+        "graphcast": {
+          "hits": 215,
+          "attempts": 724,
+          "rate": 29.7
+        },
+        "icon": {
+          "hits": 276,
+          "attempts": 724,
+          "rate": 38.12
+        },
+        "jma": {
+          "hits": 85,
+          "attempts": 724,
+          "rate": 11.74
+        },
+        "knmi": {
+          "hits": 238,
+          "attempts": 724,
+          "rate": 32.87
+        },
+        "mf": {
+          "hits": 225,
+          "attempts": 724,
+          "rate": 31.08
+        },
+        "ukmo": {
+          "hits": 273,
+          "attempts": 724,
+          "rate": 37.71
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 54.28,
+      "wu_days": 725,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "warsaw": {
+      "models": {
+        "bom": {
+          "hits": 90,
+          "attempts": 453,
+          "rate": 19.87
+        },
+        "cma": {
+          "hits": 85,
+          "attempts": 685,
+          "rate": 12.41
+        },
+        "ecmwf": {
+          "hits": 237,
+          "attempts": 729,
+          "rate": 32.51
+        },
+        "gem": {
+          "hits": 291,
+          "attempts": 729,
+          "rate": 39.92
+        },
+        "gfs": {
+          "hits": 280,
+          "attempts": 729,
+          "rate": 38.41
+        },
+        "graphcast": {
+          "hits": 210,
+          "attempts": 729,
+          "rate": 28.81
+        },
+        "icon": {
+          "hits": 344,
+          "attempts": 729,
+          "rate": 47.19
+        },
+        "jma": {
+          "hits": 149,
+          "attempts": 729,
+          "rate": 20.44
+        },
+        "knmi": {
+          "hits": 284,
+          "attempts": 729,
+          "rate": 38.96
+        },
+        "mf": {
+          "hits": 218,
+          "attempts": 729,
+          "rate": 29.9
+        },
+        "ukmo": {
+          "hits": 248,
+          "attempts": 729,
+          "rate": 34.02
+        }
+      },
+      "best_model": "icon",
+      "best_wr": 47.19,
+      "wu_days": 730,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "wellington": {
+      "models": {
+        "bom": {
+          "hits": 132,
+          "attempts": 453,
+          "rate": 29.14
+        },
+        "cma": {
+          "hits": 224,
+          "attempts": 680,
+          "rate": 32.94
+        },
+        "ecmwf": {
+          "hits": 112,
+          "attempts": 728,
+          "rate": 15.38
+        },
+        "gem": {
+          "hits": 222,
+          "attempts": 728,
+          "rate": 30.49
+        },
+        "gfs": {
+          "hits": 120,
+          "attempts": 728,
+          "rate": 16.48
+        },
+        "graphcast": {
+          "hits": 180,
+          "attempts": 728,
+          "rate": 24.73
+        },
+        "icon": {
+          "hits": 180,
+          "attempts": 728,
+          "rate": 24.73
+        },
+        "jma": {
+          "hits": 111,
+          "attempts": 728,
+          "rate": 15.25
+        },
+        "knmi": {
+          "hits": 125,
+          "attempts": 728,
+          "rate": 17.17
+        },
+        "mf": {
+          "hits": 163,
+          "attempts": 728,
+          "rate": 22.39
+        },
+        "ukmo": {
+          "hits": 211,
+          "attempts": 728,
+          "rate": 28.98
+        }
+      },
+      "best_model": "cma",
+      "best_wr": 32.94,
+      "wu_days": 729,
+      "wu_unit": "C",
+      "market_unit": "C"
+    },
+    "wuhan": {
+      "models": {
+        "bom": {
+          "hits": 76,
+          "attempts": 454,
+          "rate": 16.74
+        },
+        "cma": {
+          "hits": 102,
+          "attempts": 686,
+          "rate": 14.87
+        },
+        "ecmwf": {
+          "hits": 178,
+          "attempts": 730,
+          "rate": 24.38
+        },
+        "gem": {
+          "hits": 208,
+          "attempts": 730,
+          "rate": 28.49
+        },
+        "gfs": {
+          "hits": 239,
+          "attempts": 730,
+          "rate": 32.74
+        },
+        "graphcast": {
+          "hits": 216,
+          "attempts": 730,
+          "rate": 29.59
+        },
+        "icon": {
+          "hits": 231,
+          "attempts": 730,
+          "rate": 31.64
+        },
+        "jma": {
+          "hits": 158,
+          "attempts": 730,
+          "rate": 21.64
+        },
+        "knmi": {
+          "hits": 178,
+          "attempts": 730,
+          "rate": 24.38
+        },
+        "mf": {
+          "hits": 213,
+          "attempts": 730,
+          "rate": 29.18
+        },
+        "ukmo": {
+          "hits": 151,
+          "attempts": 730,
+          "rate": 20.68
+        }
+      },
+      "best_model": "gfs",
+      "best_wr": 32.74,
+      "wu_days": 731,
+      "wu_unit": "C",
+      "market_unit": "C"
+    }
+  }
+}
