@@ -9,7 +9,10 @@ import { CITY_IDS, STATION_REGISTRY, type CityKey } from './weather-cities'
  */
 
 export const WEATHER_ENGINE_TIMEZONE = 'Asia/Shanghai'
-export const XWEATHER_BATCH_SIZE = 5
+// User-selected production target: all 41 canonical stations in one batch.
+// This is disabled until XWEATHER_BATCH_METERING_VERIFIED=1 proves that the
+// account permits the request and meters it acceptably for the free plan.
+export const XWEATHER_BATCH_SIZE = 41
 export const XWEATHER_LOOKBACK_HOURS = 2
 export const MAX_REPORT_AGE_SECONDS = 69 * 60
 export const MAX_RUN_DURATION_MS = 60_000
@@ -320,14 +323,18 @@ function normalizeXweatherObservation(station: string, payload: unknown, now: Da
 }
 
 function xweatherCredentialsConfigured(): boolean {
-  return Boolean(process.env.XWEATHER_CLIENT_ID && process.env.XWEATHER_CLIENT_SECRET)
+  return Boolean(
+    process.env.XWEATHER_CLIENT_ID &&
+      process.env.XWEATHER_CLIENT_SECRET &&
+      process.env.XWEATHER_BATCH_METERING_VERIFIED === '1',
+  )
 }
 
 async function fetchXweatherBatch(stations: readonly string[]): Promise<{ observations: NormalizedObservation[]; attempts: SourceAttempt[]; costHeaders: Record<string, string> }> {
   if (!xweatherCredentialsConfigured()) {
     return {
       observations: [],
-      attempts: stations.map((station) => ({ source: 'xweather', station, outcome: 'error', detail: 'Xweather credentials are not configured' })),
+      attempts: stations.map((station) => ({ source: 'xweather', station, outcome: 'error', detail: 'Xweather batch is disabled until credentials are configured and XWEATHER_BATCH_METERING_VERIFIED=1 is set after console verification' })),
       costHeaders: {},
     }
   }
@@ -783,7 +790,11 @@ export function getWeatherRuntimeHealth(now: Date = new Date()) {
       maxBatchSize: XWEATHER_BATCH_SIZE,
       expectedBatchesPerRun,
       projectedMonthlyNetworkRequests,
-      warning: projectedMonthlyNetworkRequests > 15_000 ? 'Configured batch size and schedule can exceed 15,000 monthly HTTP requests if each batch is billed as one access; inspect X-Cost-* headers and dashboard usage before enabling production cron.' : null,
+      warning: process.env.XWEATHER_BATCH_METERING_VERIFIED !== '1'
+        ? 'Xweather batch is intentionally disabled. Run one authenticated 41-station batch, inspect X-Cost-* headers and console usage, then set XWEATHER_BATCH_METERING_VERIFIED=1 only if it is permitted and measured acceptably.'
+        : projectedMonthlyNetworkRequests > 15_000
+          ? 'Configured batch size and schedule can exceed 15,000 monthly HTTP requests if each batch is billed as one access; inspect X-Cost-* headers and dashboard usage before enabling production cron.'
+          : null,
       lastCostHeaders: store.lastRun?.xweatherCostHeaders ?? [],
     },
     observations: Object.fromEntries([...store.observations.entries()].map(([station, observation]) => [station, {

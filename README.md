@@ -237,7 +237,7 @@ This fork adds a narrow **observation-only, push-first** engine. It preserves th
 | Deduplication | The last 10 delivery IDs/hashes are retained in memory, as requested. Duplicates receive an idempotent `200`; malformed/unknown-station payloads receive a non-retryable `202`; invalid authentication receives `401`. |
 | Stale delivery | A report older than 69 minutes is accepted only as an observable anomaly and starts a best-effort exact-station polling verification. It is never promoted to the live observation. |
 | Silent fallback | At every API schedule slot (`00, 02, 05, 07, 11, 13, 30, 32, 35, 37, 41, 43` in `Asia/Shanghai`), only stations without a current-instance Webhook record newer than 120 minutes are polled. |
-| Polling chain | Xweather batch calls use at most five exact ICAO subrequests per batch. If unavailable, the only public fallback is [AviationWeather.gov Data API](https://aviationweather.gov/data/api/) with `hours=2`, then a strict 69-minute freshness check. |
+| Polling chain | One Xweather batch request targets all 41 exact ICAO stations. It remains disabled until an authenticated 41-station test confirms the account accepts this request and its `X-Cost-*` / console usage are acceptable. If unavailable, the only public fallback is [AviationWeather.gov Data API](https://aviationweather.gov/data/api/) with `hours=2`, then a strict 69-minute freshness check. |
 | Storage | This round intentionally uses **ephemeral in-memory state only**. Vercel cold starts or instance replacement clear Webhook event IDs, raw payloads, observations, alerts and logs. Long-term history and reliable cross-instance 120-minute silence detection require persistent storage in a future round. |
 
 ### Environment and deployment
@@ -245,6 +245,7 @@ This fork adds a narrow **observation-only, push-first** engine. It preserves th
 ```bash
 cp .env.example .env.local
 # Set WEATHER_ENGINE_ENABLED=1 plus XWEATHER_CLIENT_ID / XWEATHER_CLIENT_SECRET
+# and XWEATHER_BATCH_METERING_VERIFIED=1 only after the required console test.
 npm install
 npm run typecheck
 npm run build
@@ -258,7 +259,7 @@ https://pwcc-webhook-readonly-audit-2026082.vercel.app/api/webhooks/xweather
 
 Set the vendor-supplied authentication details in the Vercel project environment using the variables documented in `.env.example`; do not commit any credentials. `GET /api/webhooks/xweather` is the readiness/challenge endpoint, `/api/weather/poll` is the station-level fallback, and `/api/weather/health` exposes current-instance logs, alert state, source outcomes and silent stations.
 
-> **Quota warning.** With 41 stations and at most five stations per Xweather batch, a full fallback poll makes nine Xweather batch HTTP requests before any public-source fallback. The in-memory health endpoint records `X-Cost-*` and `X-RateLimit-*` headers. Verify actual Xweather dashboard usage before enabling production Cron, because batch billing may be based on subrequests rather than one HTTP request.
+> **Quota gate.** The selected schedule makes 12 full-station batches per hour, or **8,640 batch HTTP requests per 30-day month**. This stays below a 15,000-access allowance only if Xweather permits 41 subrequests in one batch and measures each batch as one acceptable access. Before setting `XWEATHER_BATCH_METERING_VERIFIED=1`, run one authenticated 41-station batch, record `X-Cost-*` headers, and confirm the console usage delta. If subrequests are measured separately, do not enable this schedule.
 
 ### Deferred next-round work
 
