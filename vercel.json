@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/weather/poll",
+      "schedule": "0,2,5,7,11,13,30,32,35,37,41,43 * * * *"
+    }
+  ]
+}

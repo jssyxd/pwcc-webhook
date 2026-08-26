@@ -224,6 +224,48 @@ Environment variables:
 
 The full engine is being packaged as a follow-up release (see Roadmap). The payload schema the UI consumes is fully visible in `app/page.tsx` types.
 
+## PWCC Webhook variant: push-first observation ingestion
+
+This fork adds a narrow **observation-only, push-first** engine. It preserves the existing `weather-report` and `weather-intel` payload contracts, while forecast, market, position and strategy panels retain their existing demo/proxy behaviour. Every record must carry the exact station in `STATION_REGISTRY`; the implementation will never substitute an airport, including **KBKF** for Denver.
+
+> **Current account status:** the Xweather account has Weather API Observations access but is on the Free plan and does not show a Webhooks entitlement. Xweather documents Webhooks as a separate premium subscription. The endpoint below is complete and configurable, but no real Xweather delivery can be registered or end-to-end verified until that subscription and vendor-specific registration details are supplied.
+
+| Policy | Implemented behaviour |
+| --- | --- |
+| Webhook primary path | `POST /api/webhooks/xweather` accepts Xweather Weather API-style observation payloads, requires an exact configured ICAO, accepts only newer `reportTime`, and makes Webhook win when report times tie. It updates only the delivered station. |
+| Validation | The handler reads the original body, supports constant-time HMAC-SHA256 comparison, an optional fixed token header, configurable header/prefix names, optional URL challenge response, JSON checks and a 1 MB body limit. Environment variables remain unset until Xweather supplies its actual protocol. |
+| Deduplication | The last 10 delivery IDs/hashes are retained in memory, as requested. Duplicates receive an idempotent `200`; malformed/unknown-station payloads receive a non-retryable `202`; invalid authentication receives `401`. |
+| Stale delivery | A report older than 69 minutes is accepted only as an observable anomaly and starts a best-effort exact-station polling verification. It is never promoted to the live observation. |
+| Silent fallback | At every API schedule slot (`00, 02, 05, 07, 11, 13, 30, 32, 35, 37, 41, 43` in `Asia/Shanghai`), only stations without a current-instance Webhook record newer than 120 minutes are polled. |
+| Polling chain | Xweather batch calls use at most five exact ICAO subrequests per batch. If unavailable, the only public fallback is [AviationWeather.gov Data API](https://aviationweather.gov/data/api/) with `hours=2`, then a strict 69-minute freshness check. |
+| Storage | This round intentionally uses **ephemeral in-memory state only**. Vercel cold starts or instance replacement clear Webhook event IDs, raw payloads, observations, alerts and logs. Long-term history and reliable cross-instance 120-minute silence detection require persistent storage in a future round. |
+
+### Environment and deployment
+
+```bash
+cp .env.example .env.local
+# Set WEATHER_ENGINE_ENABLED=1 plus XWEATHER_CLIENT_ID / XWEATHER_CLIENT_SECRET
+npm install
+npm run typecheck
+npm run build
+```
+
+After Xweather enables the premium product, register the Vercel production callback:
+
+```text
+https://pwcc-webhook-readonly-audit-2026082.vercel.app/api/webhooks/xweather
+```
+
+Set the vendor-supplied authentication details in the Vercel project environment using the variables documented in `.env.example`; do not commit any credentials. `GET /api/webhooks/xweather` is the readiness/challenge endpoint, `/api/weather/poll` is the station-level fallback, and `/api/weather/health` exposes current-instance logs, alert state, source outcomes and silent stations.
+
+> **Quota warning.** With 41 stations and at most five stations per Xweather batch, a full fallback poll makes nine Xweather batch HTTP requests before any public-source fallback. The in-memory health endpoint records `X-Cost-*` and `X-RateLimit-*` headers. Verify actual Xweather dashboard usage before enabling production Cron, because batch billing may be based on subrequests rather than one HTTP request.
+
+### Deferred next-round work
+
+- Add a durable database/KV for permanent raw delivery retention, N=10 idempotency records, accurate cross-instance silence detection and daily highs.
+- Fill in Xweather's actual Webhook subscription configuration, endpoint registration/challenge process, signing header and delivery schema after the premium product is active.
+- Add forecast/model ingestion so standalone live payloads cover all non-observation dashboard panels.
+
 ## If this saved you time
 
 If the backtest data or the source saved you research hours, a star helps other traders find it.
