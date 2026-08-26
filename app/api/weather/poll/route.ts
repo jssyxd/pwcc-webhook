@@ -11,10 +11,10 @@ function requestIsAuthorized(request: NextRequest): boolean {
 }
 
 /**
- * Webhook fallback schedule. The current no-database constraint means this is
- * instance-local: a cold-started Vercel function cannot know prior deliveries
- * and will conservatively treat every station as silent. Durable delivery state
- * is explicitly deferred to the next round.
+ * Manual or future-external-scheduler Webhook fallback. The current
+ * no-database constraint means this is instance-local: a cold-started Vercel
+ * function cannot know prior deliveries and conservatively treats every station
+ * as silent. The current Hobby deployment does not register high-frequency Cron.
  */
 export async function GET(request: NextRequest) {
   if (!isWeatherEngineEnabled()) return NextResponse.json({ error: 'WEATHER_ENGINE_ENABLED=1 is required before fallback polling is enabled' }, { status: 503 })
