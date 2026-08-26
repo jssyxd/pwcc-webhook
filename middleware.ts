@@ -14,6 +14,10 @@ function cookieValue(request: Request, name: string): string | undefined {
   return undefined
 }
 
+function continueRequest() {
+  return new Response(null, { headers: { 'x-middleware-next': '1' } })
+}
+
 async function hmacHex(secret: string, message: string): Promise<string> {
   const key = await crypto.subtle.importKey(
     'raw',
@@ -31,19 +35,19 @@ async function hmacHex(secret: string, message: string): Promise<string> {
 export async function middleware(request: Request) {
   const { pathname } = new URL(request.url)
   if (pathname.startsWith('/_next') || PUBLIC_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))) {
-    return
+    return continueRequest()
   }
 
   const secret = process.env.AUTH_SECRET
   // If auth is not configured (e.g. local dev without env), stay open.
-  if (!secret || !process.env.ACCESS_PASSWORD) return
+  if (!secret || !process.env.ACCESS_PASSWORD) return continueRequest()
 
   const token = cookieValue(request, COOKIE)
   if (token) {
     const [exp, sig] = token.split('.')
     if (exp && sig && Number(exp) > Date.now()) {
       const expected = await hmacHex(secret, exp)
-      if (sig.length === expected.length && sig === expected) return
+      if (sig.length === expected.length && sig === expected) return continueRequest()
     }
   }
 
